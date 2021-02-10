@@ -3,6 +3,27 @@ extends ../templates/main
 block variables
     - var title = 'XDLE'
 
-
 block content
-    | Главная страница
+    .header-slider
+        .layout.header-slider__wrapper
+            .header-slider__container
+                .header-slider__item
+                    .header-slider__image-wrapper
+                        img(src="src/blocks/header-slider/assets/img/header-slider.png").header-slider__image
+                    .header-slider__content
+                        h3.header-slider__title
+                            span создание
+                            | интерфейсов
+                        a(href="#").button.button__yellow посмотреть проекты
+            .header-slider__navigation
+                .header-slider__navigation-item
+                    .header-slider__navigation-icon(style="background: url(src/blocks/header-slider/assets/img/icon-phone.png)")
+                    | Мобильные приложения
+                .header-slider__navigation-item.header-slider__navigation-item--active
+                    .header-slider__navigation-icon(style="background: url(src/blocks/header-slider/assets/img/icon-phone.png)")
+                    | Создание сайтов
+                .header-slider__navigation-item
+                    .header-slider__navigation-icon(style="background: url(src/blocks/header-slider/assets/img/icon-setting.png)")
+                    | Создание интерфейсов
+
+    include ../blocks/work/work

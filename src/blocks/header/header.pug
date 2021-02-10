@@ -1,1 +1,20 @@
-header.header Хэдер
+header.header
+    .header__block.layout
+        .header__top-line
+            .header__logo-menu
+                .header__logo
+                    a(href="#").logo
+                        img(src="src/blocks/header/assets/img/logo.png" width="108").header__logo-image
+
+                .header__menu
+                    a(href="#").header__menu-link Работы
+                    a(href="#").header__menu-link Контакты
+
+            .header__contact
+                a(href="mailto:info@xdle.ru").header__contact-link
+                    span.header__contact-link--icon.header__contact-link--icon-email
+                    | info@xdle.ru
+                a(href="tel:+7(812)317-7-157").header__contact-link
+                    span.header__contact-link--icon.header__contact-link--icon-phone
+                    | +7 (812) 317-7-157
+                a(href="#").button.button__blue-border Оставить заявку
