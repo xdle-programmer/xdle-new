@@ -3,6 +3,7 @@
 @import "../../blocks/base/media-queries";
 
 $macScreen: '.header-slider__image-mac';
+$iphoneScreen: '.header-slider__image-iphone';
 $interfaceScreen: '.header-slider__image-interface';
 
 
@@ -62,6 +63,25 @@ $interfaceScreen: '.header-slider__image-interface';
     .header-slider__image-el-3 {
       opacity: 0;
       animation: hideInterface3 .3s;
+    }
+  }
+  // Iphone Static
+  #{$iphoneScreen} {
+    .header-slider__image-el-2 {
+      opacity: 0;
+      animation: hideIphone2 .3s;
+    }
+    .header-slider__image-el-3 {
+      opacity: 0;
+      animation: hideIphone3 .3s;
+    }
+    .header-slider__image-el-4 {
+      opacity: 0;
+      animation: hideIphone4 .3s;
+    }
+    .header-slider__image-el-5 {
+      opacity: 0;
+      animation: hideIphone5 .3s;
     }
   }
   // Mac Static
@@ -124,6 +144,21 @@ $interfaceScreen: '.header-slider__image-interface';
         }
         .header-slider__image-el-3 {
           animation: showInterface3 .4s .8s forwards;
+        }
+      }
+      // Iphone Active
+      #{$iphoneScreen} {
+        .header-slider__image-el-2 {
+          animation: showIphone2 .6s 1.2s forwards;
+        }
+        .header-slider__image-el-3 {
+          animation: showIphone3 .6s 1.2s forwards;
+        }
+        .header-slider__image-el-4 {
+          animation: showIphone4 .6s 1.2s forwards;
+        }
+        .header-slider__image-el-5 {
+          animation: showIphone5 .6s 1.2s forwards;
         }
       }
       // Mac Active
@@ -330,6 +365,91 @@ $interfaceScreen: '.header-slider__image-interface';
   100% {
     opacity: 0;
     transform: translate3d(-25%,0,0);
+  }
+}
+
+/* Animation wrapper Iphone */
+@keyframes showIphone2 {
+  0% {
+    opacity: 0;
+    transform: perspective(500px) translate3d(-20px,-23px,0px);
+  }
+  100% {
+    opacity: 1;
+    transform: perspective(500px) translate3d(0px,0px,0);
+  }
+}
+@keyframes hideIphone2 {
+  0% {
+    opacity: 1;
+    transform: perspective(500px) translate3d(0px,0px,0);
+  }
+  100% {
+    opacity: 0;
+    transform: perspective(500px) translate3d(-20px,-23px,0px);
+  }
+}
+
+@keyframes showIphone3 {
+  0% {
+    opacity: 0;
+    transform: perspective(500px) translate3d(-120px,-72px,0px);
+  }
+  100% {
+    opacity: 1;
+    transform: perspective(500px) translate3d(0px,0px,0);
+  }
+}
+@keyframes hideIphone3 {
+  0% {
+    opacity: 1;
+    transform: perspective(500px) translate3d(0px,0px,0);
+  }
+  100% {
+    opacity: 0;
+    transform: perspective(500px) translate3d(-120px,-72px,0px);
+  }
+}
+
+@keyframes showIphone4 {
+  0% {
+    opacity: 0;
+    transform: perspective(500px) translate3d(-172px,0px,0px);
+  }
+  100% {
+    opacity: 1;
+    transform: perspective(500px) translate3d(0px,0px,0);
+  }
+}
+@keyframes hideIphone4 {
+  0% {
+    opacity: 1;
+    transform: perspective(500px) translate3d(0px,0px,0);
+  }
+  100% {
+    opacity: 0;
+    transform: perspective(500px) translate3d(-172px,0px,0px);
+  }
+}
+
+@keyframes showIphone5 {
+  0% {
+    opacity: 0;
+    transform: perspective(500px) translate3d(-174px,0px,0px);
+  }
+  100% {
+    opacity: 1;
+    transform: perspective(500px) translate3d(0px,0px,0);
+  }
+}
+@keyframes hideIphone5 {
+  0% {
+    opacity: 1;
+    transform: perspective(500px) translate3d(0px,0px,0px);
+  }
+  100% {
+    opacity: 0;
+    transform: perspective(500px) translate3d(-174px,0px,0px);
   }
 }
 
