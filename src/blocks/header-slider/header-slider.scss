@@ -52,7 +52,7 @@ $interfaceScreen: '.header-slider__image-interface';
     top: 0;
     left: 0;
     max-width: 100%;
-    transition: none !important;
+    //transition: none !important;
   }
   // Interface Static
   #{$interfaceScreen} {
@@ -149,46 +149,46 @@ $interfaceScreen: '.header-slider__image-interface';
       // Iphone Active
       #{$iphoneScreen} {
         .header-slider__image-el-2 {
-          animation: showIphone2 .6s 1.2s forwards;
+          animation: showIphone2 1s 1.1s forwards;
         }
         .header-slider__image-el-3 {
-          animation: showIphone3 .6s 1.2s forwards;
+          animation: showIphone3 1s 1.1s forwards;
         }
         .header-slider__image-el-4 {
-          animation: showIphone4 .6s 1.2s forwards;
+          animation: showIphone4 1s 1.1s forwards;
         }
         .header-slider__image-el-5 {
-          animation: showIphone5 .6s 1.2s forwards;
+          animation: showIphone5 1s 1.1s forwards;
         }
       }
       // Mac Active
       #{$macScreen} {
         .header-slider__image-el-3 {
-          animation: showMac3 .8s 1.4s forwards;
+          animation: showMac3 .8s 1s forwards;
         }
         .header-slider__image-el-4 {
-          animation:  showMac4 .8s 1.4s forwards;
+          animation:  showMac4 .8s 1s forwards;
         }
         .header-slider__image-el-5 {
-          animation:  showMac5 .8s 1.4s forwards;
+          animation:  showMac5 .8s 1s forwards;
         }
         .header-slider__image-el-6 {
-          animation:  showMac6 .8s 1.4s forwards;
+          animation:  showMac6 .8s 1s forwards;
         }
         .header-slider__image-el-7 {
-          animation:  showMac7 .8s 1.4s forwards;
+          animation:  showMac7 .8s 1s forwards;
         }
         .header-slider__image-el-8 {
-          animation:  showMac8 .8s 1.4s forwards;
+          animation:  showMac8 .8s 1s forwards;
         }
         .header-slider__image-el-9 {
-          animation:  showMac9 .8s 1.4s forwards;
+          animation:  showMac9 .8s 1s forwards;
         }
         .header-slider__image-el-10 {
-          animation:  showMac10 .8s 1.4s forwards;
+          animation:  showMac10 .8s 1s forwards;
         }
         .header-slider__image-el-11 {
-          animation:  showMac11 .8s 1.4s forwards;
+          animation:  showMac11 .8s 1s forwards;
         }
       }
 
