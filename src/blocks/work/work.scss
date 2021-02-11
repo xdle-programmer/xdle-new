@@ -9,6 +9,13 @@
   &__item {
     position: relative;
     padding-bottom: 100%;
+    &:hover {
+      .work__item-content {
+        transform: scale(1);
+        opacity: 1;
+        visibility: visible;
+      }
+    }
 
     @include tablet-big-screen {
       padding-bottom: 200%;
@@ -30,12 +37,11 @@
     background: rgba(245, 245, 245, .25);
     backdrop-filter: blur(10px);
     height: 100%;
+    width: 100%;
     transition: all .25s ease-out;
     transform: scale(.8);
-
-    &:hover {
-      transform: scale(1);
-    }
+    opacity: 0;
+    visibility: hidden;
   }
 
   &__item-title {
