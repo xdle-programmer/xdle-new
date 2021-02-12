@@ -5,6 +5,8 @@
 $macScreen: '.header-slider__image-mac';
 $iphoneScreen: '.header-slider__image-iphone';
 $interfaceScreen: '.header-slider__image-interface';
+$imageWrapper: '.header-slider__image-wrapper';
+$sliderContent: '.header-slider__content';
 
 
 .header-slider {
@@ -26,8 +28,6 @@ $interfaceScreen: '.header-slider__image-interface';
     width: 100%;
     height: 100vh;
   }
-  $imageWrapper: '.header-slider__image-wrapper';
-  $sliderContent: '.header-slider__content';
 
   #{$imageWrapper} {
     opacity: 0;
@@ -47,80 +47,87 @@ $interfaceScreen: '.header-slider__image-interface';
 
   }
 
-  &__image {
+  &__image-item {
     position: absolute;
     top: 0;
     left: 0;
-    max-width: 100%;
-    //transition: none !important;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all .5s ease;
+    transition-delay: 1s;
+    transition-duration: .5s;
+    animation-duration: .8s;
+    transform-style: preserve-3d;
   }
+
   // Interface Static
   #{$interfaceScreen} {
-    .header-slider__image-el-2 {
-      opacity: 0;
-      animation: hideInterface2 .3s;
+    .header-slider__image-item--el-1 {
+      display: block;
+      opacity: 1 !important;
+      transform: none !important;
     }
-    .header-slider__image-el-3 {
-      opacity: 0;
-      animation: hideInterface3 .3s;
+    .header-slider__image-item--el-2 {
+      transform: perspective(500px) translate3d(8%,-5%,0px);
+    }
+    .header-slider__image-item--el-3 {
+      transform: perspective(500px) translate3d(0%,-2%,0);
     }
   }
   // Iphone Static
   #{$iphoneScreen} {
-    .header-slider__image-el-2 {
-      opacity: 0;
-      animation: hideIphone2 .3s;
+    .header-slider__image-item--el-1 {
+      display: block;
+      opacity: 1 !important;
+      transform: none !important;
     }
-    .header-slider__image-el-3 {
-      opacity: 0;
-      animation: hideIphone3 .3s;
+    .header-slider__image-item--el-2 {
+      transform: perspective(500px) translate3d(-4%,-4%,-10px);
     }
-    .header-slider__image-el-4 {
-      opacity: 0;
-      animation: hideIphone4 .3s;
+    .header-slider__image-item--el-3 {
+      transform: perspective(500px) translate3d(-25%,-11%,0);
     }
-    .header-slider__image-el-5 {
-      opacity: 0;
-      animation: hideIphone5 .3s;
+    .header-slider__image-item--el-4 {
+      transform: perspective(500px) translate3d(-25%,0%,-20px);
+    }
+    .header-slider__image-item--el-5 {
+      transform: perspective(500px) translate3d(-36%,0,0);
     }
   }
   // Mac Static
   #{$macScreen} {
-    .header-slider__image-el-3 {
-      opacity: 0;
-      animation: hideMac3 .3s;
+    .header-slider__image-item--el-1 {
+      display: block;
+      opacity: 1 !important;
+      transform: none !important;
     }
-    .header-slider__image-el-4 {
-      opacity: 0;
-      animation: hideMac4 .8s;
+    .header-slider__image-item--el-2 {
+      transform: perspective(500px) translate3d(-9%,-5%,0);
     }
-    .header-slider__image-el-5 {
-      opacity: 0;
-      animation: hideMac5 .5s;
+    .header-slider__image-item--el-4 {
+      transform: perspective(500px) translate3d(19%,-18%,0);
     }
-    .header-slider__image-el-6 {
-      opacity: 0;
-      animation: hideMac6 .4s;
+    .header-slider__image-item--el-5 {
+      transform: perspective(500px) translate3d(-8%,0%, -25px);
     }
-    .header-slider__image-el-7 {
-      opacity: 0;
-      animation: hideMac7 .4s;
+    .header-slider__image-item--el-6 {
+      transform: perspective(500px) translate3d(-11%,0,-17px);
     }
-    .header-slider__image-el-8 {
-      opacity: 0;
-      animation: hideMac8 .4s;
+    .header-slider__image-item--el-7 {
+      transform: perspective(500px) translate3d(11%,0%,0);
     }
-    .header-slider__image-el-9 {
-      opacity: 0;
-      animation: hideMac9 .4s;
+    .header-slider__image-item--el-8 {
+      transform: perspective(500px) translate3d(6%,0%,0);
     }
-    .header-slider__image-el-10 {
-      opacity: 0;
-      animation: hideMac10 .4s;
+    .header-slider__image-item--el-9 {
+      transform: perspective(500px) translate3d(30%,-10%,0);
     }
-    .header-slider__image-el-11 {
-      opacity: 0;
-      animation: hideMac11 .4s;
+    .header-slider__image-item--el-10 {
+      transform: perspective(500px) translate3d(0%,-3%,0);
+    }
+    .header-slider__image-item--el-11 {
+      transform: perspective(500px) translate3d(18%,-10%,0);
     }
   }
 
@@ -139,56 +146,23 @@ $interfaceScreen: '.header-slider__image-interface';
 
       // Interface Active
       #{$interfaceScreen} {
-        .header-slider__image-el-2 {
-          animation: showInterface2 .4s .6s forwards;
-        }
-        .header-slider__image-el-3 {
-          animation: showInterface3 .4s .8s forwards;
+        .header-slider__image-item {
+          opacity: 1;
+          transform: translate3d(0,0,0);
         }
       }
       // Iphone Active
       #{$iphoneScreen} {
-        .header-slider__image-el-2 {
-          animation: showIphone2 1s 1.1s forwards;
-        }
-        .header-slider__image-el-3 {
-          animation: showIphone3 1s 1.1s forwards;
-        }
-        .header-slider__image-el-4 {
-          animation: showIphone4 1s 1.1s forwards;
-        }
-        .header-slider__image-el-5 {
-          animation: showIphone5 1s 1.1s forwards;
+        .header-slider__image-item {
+          opacity: 1;
+          transform: translate3d(0,0,0);
         }
       }
       // Mac Active
       #{$macScreen} {
-        .header-slider__image-el-3 {
-          animation: showMac3 .8s 1s forwards;
-        }
-        .header-slider__image-el-4 {
-          animation:  showMac4 .8s 1s forwards;
-        }
-        .header-slider__image-el-5 {
-          animation:  showMac5 .8s 1s forwards;
-        }
-        .header-slider__image-el-6 {
-          animation:  showMac6 .8s 1s forwards;
-        }
-        .header-slider__image-el-7 {
-          animation:  showMac7 .8s 1s forwards;
-        }
-        .header-slider__image-el-8 {
-          animation:  showMac8 .8s 1s forwards;
-        }
-        .header-slider__image-el-9 {
-          animation:  showMac9 .8s 1s forwards;
-        }
-        .header-slider__image-el-10 {
-          animation:  showMac10 .8s 1s forwards;
-        }
-        .header-slider__image-el-11 {
-          animation:  showMac11 .8s 1s forwards;
+        .header-slider__image-item {
+          opacity: 1;
+          transform: translate3d(0,0,0);
         }
       }
 
@@ -205,25 +179,33 @@ $interfaceScreen: '.header-slider__image-interface';
       }
 
     }
+    &--inactive {
+      .header-slider__image-item {
+        opacity: 0;
+        transition-delay: 0s;
+        transition-duration: .3s;
+        animation-duration: .4s;
+      }
+    }
   }
 
-  &__image-mac {
-    position: relative;
-    width: 572px;
-    height: 566px;
-    filter: drop-shadow(-30px 0px 30px rgba(0,0,0, .3));
-  }
-  &__image-iphone {
-    position: relative;
-    width: 485px;
-    height: 661px;
-    filter: drop-shadow(-30px 0px 30px rgba(0,0,0, .3));
-  }
+  &__image-mac,
+  &__image-iphone,
   &__image-interface {
     position: relative;
+    filter: drop-shadow(-50px 0 30px rgba(0,0,0,.15));
+  }
+  &__image-mac {
+    width: 572px;
+    height: 566px;
+  }
+  &__image-iphone {
+    width: 485px;
+    height: 661px;
+  }
+  &__image-interface {
     width: 435px;
     height: 537px;
-    filter: drop-shadow(-30px 0px 30px rgba(0,0,0, .3));
   }
 
   &__title {
@@ -279,10 +261,6 @@ $interfaceScreen: '.header-slider__image-interface';
     &--active {
       background-color: #ffffff;
       #{$navigation-icon} {
-        //background: #193464 !important;
-        //width: 55px;
-        //height: 55px;
-        //box-shadow: 5px 4px 16px rgba(0, 0, 0, 0.16);
         &:before {
           opacity: 1;
           visibility: visible;
@@ -367,323 +345,3 @@ $interfaceScreen: '.header-slider__image-interface';
     transform: translate3d(-25%,0,0);
   }
 }
-
-/* Animation wrapper Iphone */
-@keyframes showIphone2 {
-  0% {
-    opacity: 0;
-    transform: perspective(500px) translate3d(-20px,-23px,0px);
-  }
-  100% {
-    opacity: 1;
-    transform: perspective(500px) translate3d(0px,0px,0);
-  }
-}
-@keyframes hideIphone2 {
-  0% {
-    opacity: 1;
-    transform: perspective(500px) translate3d(0px,0px,0);
-  }
-  100% {
-    opacity: 0;
-    transform: perspective(500px) translate3d(-20px,-23px,0px);
-  }
-}
-
-@keyframes showIphone3 {
-  0% {
-    opacity: 0;
-    transform: perspective(500px) translate3d(-120px,-72px,0px);
-  }
-  100% {
-    opacity: 1;
-    transform: perspective(500px) translate3d(0px,0px,0);
-  }
-}
-@keyframes hideIphone3 {
-  0% {
-    opacity: 1;
-    transform: perspective(500px) translate3d(0px,0px,0);
-  }
-  100% {
-    opacity: 0;
-    transform: perspective(500px) translate3d(-120px,-72px,0px);
-  }
-}
-
-@keyframes showIphone4 {
-  0% {
-    opacity: 0;
-    transform: perspective(500px) translate3d(-172px,0px,0px);
-  }
-  100% {
-    opacity: 1;
-    transform: perspective(500px) translate3d(0px,0px,0);
-  }
-}
-@keyframes hideIphone4 {
-  0% {
-    opacity: 1;
-    transform: perspective(500px) translate3d(0px,0px,0);
-  }
-  100% {
-    opacity: 0;
-    transform: perspective(500px) translate3d(-172px,0px,0px);
-  }
-}
-
-@keyframes showIphone5 {
-  0% {
-    opacity: 0;
-    transform: perspective(500px) translate3d(-174px,0px,0px);
-  }
-  100% {
-    opacity: 1;
-    transform: perspective(500px) translate3d(0px,0px,0);
-  }
-}
-@keyframes hideIphone5 {
-  0% {
-    opacity: 1;
-    transform: perspective(500px) translate3d(0px,0px,0px);
-  }
-  100% {
-    opacity: 0;
-    transform: perspective(500px) translate3d(-174px,0px,0px);
-  }
-}
-
-/* Animation wrapper Interface */
-@keyframes showInterface2 {
-  0% {
-    opacity: 0;
-    transform: perspective(500px) translate3d(30px, -26px, 0px);
-  }
-  100% {
-    opacity: 1;
-    transform: perspective(500px) translate3d(0px,0px,0);
-  }
-}
-@keyframes hideInterface2 {
-  0% {
-    opacity: 1;
-    transform: perspective(500px) translate3d(0px,0px,0) !important;
-  }
-  100% {
-    opacity: 0;
-    transform: perspective(500px) translate3d(31px, -26px, 0px);
-  }
-}
-
-@keyframes showInterface3 {
-  0% {
-    opacity: 0;
-    transform: perspective(500px) translate3d(-10px,0px,20px);
-  }
-  100% {
-    opacity: 1;
-    transform: perspective(500px) translate3d(0px,0px,0);
-  }
-}
-
-@keyframes hideInterface3 {
-  0% {
-    opacity: 1;
-    transform: perspective(500px) translate3d(0px,0px,0);
-  }
-  100% {
-    opacity: 0;
-    transform: perspective(500px) translate3d(-10px,0px,20px);
-  }
-}
-
-/* Animation wrapper Mac */
-@keyframes showMac3 {
-  0% {
-    opacity: 0;
-    transform: perspective(500px) translate3d(0px, 0px, -65px);
-  }
-  100% {
-    opacity: 1;
-    transform: perspective(500px) translate3d(0px,0px,0);
-  }
-}
-@keyframes hideMac3 {
-  0% {
-    opacity: 1;
-    transform: perspective(500px) translate3d(0px,0px,0);
-  }
-  100% {
-    opacity: 0;
-    transform: perspective(500px) translate3d(0px, 0px, -65px);
-  }
-}
-
-@keyframes showMac4 {
-  0% {
-    opacity: 0;
-    transform: perspective(500px) translate3d(82px, -63px, -100px);
-  }
-  100% {
-    opacity: 1;
-    transform: perspective(500px) translate3d(0px,0px,0);
-  }
-}
-@keyframes hideMac4 {
-  0% {
-    opacity: 1;
-    transform: perspective(500px) translate3d(0px,0px,0);
-  }
-  100% {
-    opacity: 0;
-    transform: perspective(500px) translate3d(82px, -63px, -100px);
-  }
-}
-
-@keyframes showMac5 {
-  0% {
-    opacity: 0;
-    transform: perspective(500px) translate3d(0px, 0px, -35px);
-  }
-  100% {
-    opacity: 1;
-    transform: perspective(500px) translate3d(0px,0px,0);
-  }
-}
-@keyframes hideMac5 {
-  0% {
-    opacity: 1;
-    transform: perspective(500px) translate3d(0px,0px,0);
-  }
-  100% {
-    opacity: 0;
-    transform: perspective(500px) translate3d(0px, 0px, -35px);
-  }
-}
-
-@keyframes showMac6 {
-  0% {
-    opacity: 0;
-    transform: perspective(500px) translate3d(0px, 0px, -160px)
-  }
-  100% {
-    opacity: 1;
-    transform: perspective(500px) translate3d(0px,0px,0);
-  }
-}
-@keyframes hideMac6 {
-  0% {
-    opacity: 1;
-    transform: perspective(500px) translate3d(0px,0px,0);
-  }
-  100% {
-    opacity: 0;
-    transform: perspective(500px) translate3d(0px, 0px, -160px);
-  }
-}
-
-@keyframes showMac7 {
-  0% {
-    opacity: 0;
-    transform: perspective(500px) translate3d(28px, -77px, -125px);
-  }
-  100% {
-    opacity: 1;
-    transform: perspective(500px) translate3d(0px,0px,0);
-  }
-}
-@keyframes hideMac7 {
-  0% {
-    opacity: 1;
-    transform: perspective(500px) translate3d(0px,0px,0);
-  }
-  100% {
-    opacity: 0;
-    transform: perspective(500px) translate3d(28px, -77px, -125px);
-  }
-}
-
-@keyframes showMac8 {
-  0% {
-    opacity: 0;
-    transform: perspective(500px) translate3d(0px,-80px,-120px);
-  }
-  100% {
-    opacity: 1;
-    transform: perspective(500px) translate3d(0px,0px,0);
-  }
-}
-@keyframes hideMac8 {
-  0% {
-    opacity: 1;
-    transform: perspective(500px) translate3d(0px,0px,0);
-  }
-  100% {
-    opacity: 0;
-    transform: perspective(500px) translate3d(0px,-80px,-120px);
-  }
-}
-
-@keyframes showMac9 {
-  0% {
-    opacity: 0;
-    transform: perspective(500px) translate3d(150px,0px,-60px);
-  }
-  100% {
-    opacity: 1;
-    transform: perspective(500px) translate3d(0px,0px,0);
-  }
-}
-@keyframes hideMac9 {
-  0% {
-    opacity: 1;
-    transform: perspective(500px) translate3d(0px,0px,0);
-  }
-  100% {
-    opacity: 0;
-    transform: perspective(500px) translate3d(150px,0px,-60px);
-  }
-}
-
-@keyframes showMac10 {
-  0% {
-    opacity: 0;
-    transform: perspective(500px) translate3d(-12px,-12px,0px);
-  }
-  100% {
-    opacity: 1;
-    transform: perspective(500px) translate3d(0px,0px,0);
-  }
-}
-@keyframes hideMac10 {
-  0% {
-    opacity: 1;
-    transform: perspective(500px) translate3d(0px,0px,0);
-  }
-  100% {
-    opacity: 0;
-    transform: perspective(500px) translate3d(-12px,-12px,0px);
-  }
-}
-
-@keyframes showMac11 {
-  0% {
-    opacity: 0;
-    transform: perspective(500px) translate3d(190px,-108px,-40px);
-  }
-  100% {
-    opacity: 1;
-    transform: perspective(500px) translate3d(0px,0px,0);
-  }
-}
-@keyframes hideMac11 {
-  0% {
-    opacity: 1;
-    transform: perspective(500px) translate3d(0px,0px,0);
-  }
-  100% {
-    opacity: 0;
-    transform: perspective(500px) translate3d(190px,-108px,-40px);
-  }
-}
-

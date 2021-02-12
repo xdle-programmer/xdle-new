@@ -9,7 +9,7 @@ let $sliderMain = $('.header-slider'),
 
 resultHeight = countSection * heightPage;
 $sliderMain.height(resultHeight)
- console.log(heightPage)
+ // console.log(heightPage)
  $(window).on('scroll', function () {
      let scrollOffset = $(window).scrollTop()
 
@@ -27,7 +27,18 @@ $('.header-slider__navigation-item').on('click', function(){
     $('.header-slider__navigation-item').removeClass('header-slider__navigation-item--active');
     $(this).addClass('header-slider__navigation-item--active');
 
-    $('.header-slider__item').toggleClass('header-slider__item--active');
+    // console.log($sliderItems.hasClass('header-slider__item--active'))
+    if($sliderItems.hasClass('header-slider__item--active')) {
+        $sliderItems.removeClass('header-slider__item--active');
+        $sliderItems.addClass('header-slider__item--inactive');
+    } else {
+        $sliderItems.addClass('header-slider__item--active');
+        $sliderItems.removeClass('header-slider__item--inactive');
+    }
+})
+
+$(window).on('load', function (){
+    $sliderItems.addClass('header-slider__item--active');
 })
 
 // let $slideImages = $('.header-slider__image-wrapper .header-slider__image');
