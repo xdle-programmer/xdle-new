@@ -2,49 +2,127 @@
 @import "../../blocks/base/variables";
 @import "../../blocks/base/media-queries";
 
-$macScreen: '.header-slider__image-mac';
-$iphoneScreen: '.header-slider__image-iphone';
-$interfaceScreen: '.header-slider__image-interface';
-$imageWrapper: '.header-slider__image-wrapper';
-$sliderContent: '.header-slider__content';
-
+$activeSlide: '.header-slider__item--active';
+$inActiveSlide: '.header-slider__item--inactive';
 
 .header-slider {
   position: relative;
 
   &__wrapper {
-    position: fixed;
     width: 100%;
     height: 100vh;
-    left: 50%;
-    top: 0;
     display: flex;
     justify-content: space-between;
     transition: none;
-    transform: translate(-50%, 0) !important;
     padding-top: 40px;
   }
+
   &__container {
     width: 100%;
     height: 100vh;
   }
 
-  #{$imageWrapper} {
+  &__title {
+    color: #1c1c1c;
+    font-size: 65px;
+    font-weight: 800;
+    line-height: 62px;
+    margin-bottom: 46px;
     opacity: 0;
-    animation: hideImage .5s
+    transform: translate3d(35%, 0, 0);
+
+    #{$activeSlide} & {
+      opacity: 1;
+      transform: translate3d(0, 0, 0)
+    }
+
+    #{$inActiveSlide} & {
+      opacity: 0;
+      transform: translate3d(-25%, 0, 0)
+    }
   }
 
-  #{$sliderContent} {
+  &__title-inner-big {
 
-    .header-slider__title {
-      opacity: 0;
-      animation: hideText .8s;
-    }
-    .button {
-      opacity: 0;
-      animation: hideText .3s;
+  }
+
+  &__title-inner-small {
+    font-size: 50px;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+
+  &__button {
+    opacity: 0;
+    height: 54px;
+    border-radius: 30px;
+    padding: 0 35px;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    transition: all .3s ease-out;
+    transform: translate3d(50%, 0, 0);
+
+    #{$activeSlide} & {
+      opacity: 1;
+      transform: translate3d(0, 0, 0)
     }
 
+    #{$inActiveSlide} & {
+      opacity: 0;
+      transform: translate3d(-50%, 0, 0);
+    }
+  }
+
+  &__item {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    width: calc(100% - 270px);
+    min-height: 600px;
+  }
+
+  &__image-wrapper {
+    opacity: 0;
+    transform: translate3d(25%, 0, 0);
+
+    #{$activeSlide} & {
+      opacity: 1;
+      transform: translate3d(0, 0, 0)
+    }
+
+    #{$inActiveSlide} & {
+      opacity: 0;
+      transform: translate3d(-25%, 0, 0);
+    }
+  }
+
+  &__image-box {
+    position: relative;
+    filter: drop-shadow(-50px 0 30px rgba(0, 0, 0, .15));
+
+    &--iphone {
+      width: 485px;
+      height: 661px;
+
+      @include tablet-big-screen {
+        width: 300px;
+        height: 500px;
+      }
+    }
+
+    &--mac {
+      width: 572px;
+      height: 566px;
+    }
+
+    &--interface {
+      width: 435px;
+      height: 537px;
+    }
   }
 
   &__image-item {
@@ -57,173 +135,90 @@ $sliderContent: '.header-slider__content';
     transition: all .5s ease;
     transition-delay: 1s;
     transition-duration: .5s;
-    animation-duration: .8s;
-    transform-style: preserve-3d;
-  }
 
-  // Interface Static
-  #{$interfaceScreen} {
-    .header-slider__image-item--el-1 {
-      display: block;
-      opacity: 1 !important;
-      transform: none !important;
+    &--background {
+      opacity: 1;
+      transform: none;
     }
-    .header-slider__image-item--el-2 {
-      transform: perspective(500px) translate3d(8%,-5%,0px);
-    }
-    .header-slider__image-item--el-3 {
-      transform: perspective(500px) translate3d(0%,-2%,0);
-    }
-  }
-  // Iphone Static
-  #{$iphoneScreen} {
-    .header-slider__image-item--el-1 {
-      display: block;
-      opacity: 1 !important;
-      transform: none !important;
-    }
-    .header-slider__image-item--el-2 {
-      transform: perspective(500px) translate3d(-4%,-4%,-10px);
-    }
-    .header-slider__image-item--el-3 {
-      transform: perspective(500px) translate3d(-25%,-11%,0);
-    }
-    .header-slider__image-item--el-4 {
-      transform: perspective(500px) translate3d(-25%,0%,-20px);
-    }
-    .header-slider__image-item--el-5 {
-      transform: perspective(500px) translate3d(-36%,0,0);
-    }
-  }
-  // Mac Static
-  #{$macScreen} {
-    .header-slider__image-item--el-1 {
-      display: block;
-      opacity: 1 !important;
-      transform: none !important;
-    }
-    .header-slider__image-item--el-2 {
-      transform: perspective(500px) translate3d(-9%,-5%,0);
-    }
-    .header-slider__image-item--el-4 {
-      transform: perspective(500px) translate3d(19%,-18%,0);
-    }
-    .header-slider__image-item--el-5 {
-      transform: perspective(500px) translate3d(-8%,0%, -25px);
-    }
-    .header-slider__image-item--el-6 {
-      transform: perspective(500px) translate3d(-11%,0,-17px);
-    }
-    .header-slider__image-item--el-7 {
-      transform: perspective(500px) translate3d(11%,0%,0);
-    }
-    .header-slider__image-item--el-8 {
-      transform: perspective(500px) translate3d(6%,0%,0);
-    }
-    .header-slider__image-item--el-9 {
-      transform: perspective(500px) translate3d(30%,-10%,0);
-    }
-    .header-slider__image-item--el-10 {
-      transform: perspective(500px) translate3d(0%,-3%,0);
-    }
-    .header-slider__image-item--el-11 {
-      transform: perspective(500px) translate3d(18%,-10%,0);
-    }
-  }
 
-  &__item {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    //height: calc(100vh - 150px);
-    height: 100vh;
-    width: calc(100% - 270px);
-    min-height: 600px;
-    //display: none;
-    &--active {
-      //display: flex;
-
-      // Interface Active
-      #{$interfaceScreen} {
-        .header-slider__image-item {
-          opacity: 1;
-          transform: translate3d(0,0,0);
-        }
-      }
-      // Iphone Active
-      #{$iphoneScreen} {
-        .header-slider__image-item {
-          opacity: 1;
-          transform: translate3d(0,0,0);
-        }
-      }
-      // Mac Active
-      #{$macScreen} {
-        .header-slider__image-item {
-          opacity: 1;
-          transform: translate3d(0,0,0);
-        }
-      }
-
-      #{$imageWrapper} {
-        animation: showImage .5s .4s forwards;
-      }
-      #{$sliderContent} {
-        .header-slider__title {
-          animation: showText .6s .3s forwards;
-        }
-        .button {
-          animation: showText .8s .3s forwards;
-        }
-      }
-
+    &--iphone-1 {
+      transform: translate3d(-4%, -4%, -10px);
     }
-    &--inactive {
-      .header-slider__image-item {
-        opacity: 0;
-        transition-delay: 0s;
-        transition-duration: .3s;
-        animation-duration: .4s;
-      }
+
+    &--iphone-2 {
+      transform: translate3d(-25%, -11%, 0);
+    }
+
+    &--iphone-3 {
+      transform: translate3d(-25%, 0%, -20px);
+    }
+
+    &--iphone-4 {
+      transform: translate3d(-36%, 0, 0);
+    }
+
+    &--interface-1 {
+      transform: translate3d(8%, -5%, 0px);
+    }
+
+    &--interface-2 {
+      transform: translate3d(0%, -2%, 0);
+    }
+
+    &--mac-1 {
+      transform: translate3d(-9%, -5%, 0);
+    }
+
+    &--mac-2 {
+      transform: translate3d(19%, -18%, 0);
+    }
+
+    &--mac-3 {
+      transform: translate3d(19%, -18%, 0);
+    }
+
+    &--mac-4 {
+      transform: translate3d(-8%, 0%, -25px);
+    }
+
+    &--mac-5 {
+      transform: translate3d(-11%, 0, -17px);
+    }
+
+    &--mac-6 {
+      transform: translate3d(11%, 0%, 0);
+    }
+
+    &--mac-7 {
+      transform: translate3d(6%, 0%, 0);
+    }
+
+    &--mac-8 {
+      transform: translate3d(30%, -10%, 0);
+    }
+
+    &--mac-9 {
+      transform: translate3d(0%, -3%, 0);
+    }
+
+    &--mac-10 {
+      transform: translate3d(18%, -10%, 0);
+    }
+
+    #{$activeSlide} & {
+      opacity: 1;
+      transform: translate3d(0, 0, 0)
     }
   }
 
-  &__image-mac,
-  &__image-iphone,
-  &__image-interface {
-    position: relative;
-    filter: drop-shadow(-50px 0 30px rgba(0,0,0,.15));
-  }
-  &__image-mac {
-    width: 572px;
-    height: 566px;
-  }
-  &__image-iphone {
-    width: 485px;
-    height: 661px;
-  }
-  &__image-interface {
-    width: 435px;
-    height: 537px;
-  }
-
-  &__title {
-    color: #1c1c1c;
-    font-size: 65px;
-    font-weight: 800;
-    line-height: 62px;
-    margin-bottom: 46px;
-    span {
-      display: block;
-      font-size: 50px;
-      font-weight: 300;
-      text-transform: uppercase;
-    }
+  &__image {
+    display: block;
+    width: 100%;
+    height: auto;
   }
 
   &__navigation {
-    position: fixed;
+    position: absolute;
     right: 0;
     top: 0;
     height: 100vh;
@@ -252,14 +247,18 @@ $sliderContent: '.header-slider__content';
     cursor: pointer;
     transition: all .3s ease-out;
     user-select: none;
+
     &:not(:last-child) {
       margin-bottom: 20px;
     }
+
     &:hover {
       background-color: #ffffff;
     }
+
     &--active {
       background-color: #ffffff;
+
       #{$navigation-icon} {
         &:before {
           opacity: 1;
@@ -280,6 +279,7 @@ $sliderContent: '.header-slider__content';
     background-repeat: no-repeat !important;
     background-position: center !important;
     margin-bottom: 10px;
+
     &:before {
       position: absolute;
       top: 0;
@@ -297,51 +297,4 @@ $sliderContent: '.header-slider__content';
     }
   }
 
-}
-
-/* Animation wrapper image */
-@keyframes showImage {
-  0% {
-    opacity: 0;
-    transform: translate3d(25%,0,0)
-  }
-  100% {
-    opacity: 1;
-    transform: translate3d(0,0,0)
-  }
-}
-@keyframes hideImage {
-  0% {
-    opacity: 1;
-    transform: translate3d(0,0,0)
-  }
-  100% {
-    opacity: 0;
-    transform: translate3d(-25%,0,0)
-  }
-}
-
-/* Animation wrapper Text */
-@keyframes showText {
-  0% {
-    opacity: 0;
-    -webkit-transform: translate3d(35%,0,0);
-    transform: translate3d(35%,0,0)
-  }
-
-  100% {
-    opacity: 1;
-    -webkit-transform: translate3d(0,0,0);
-    transform: translate3d(0,0,0);
-  }
-}
-@keyframes hideText {
-  0% {
-    opacity: 1;
-    transform: translate3d(0,0,0);
-  }
-  100% {
-    opacity: 0;
-    transform: translate3d(-25%,0,0);
-  }
 }
