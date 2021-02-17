@@ -1,8 +1,8 @@
 headerScroll();
 
 function headerScroll() {
-    let $topHeader = $('.header');
-    let scrollClass = 'header--scroll';
+    let $topHeader = $('.header__top');
+    let scrollClass = 'header__top--scroll';
 
     checkHeaderPosition();
 

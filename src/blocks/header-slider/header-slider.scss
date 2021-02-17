@@ -7,16 +7,12 @@ $inActiveSlide: '.header-slider__item--inactive';
 
 .header-slider {
   position: relative;
-  padding-top: 140px;
+
+  //padding-top: 140px;
   //background: url(assets/img/background-dots.png) no-repeat right 0 bottom 120px;
 
   @include notebook-last-screen {
     overflow: hidden;
-  }
-
-  @include notebook-small-screen {
-    padding-top: 100px;
-    padding-bottom: 40px;
   }
 
   &__wrapper {

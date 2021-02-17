@@ -4,27 +4,36 @@
 
 
 .header {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  padding: 50px 0;
-  z-index: 500;
+  padding-top: 140px;
 
   @include notebook-small-screen {
-    padding: 25px 0;
+    padding-top: 100px;
+    padding-bottom: 40px;
   }
 
-  &--scroll {
+  $scroll: '.header__top--scroll';
+
+  &__top {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 50px 0;
+    z-index: 500;
+
+    @include notebook-small-screen {
+      padding: 25px 0;
+    }
+  }
+
+  &__top--scroll {
     background: rgba(138, 196, 255, .1); // rgba(21, 23, 35, .7);
     backdrop-filter: blur(10px);
     box-shadow: 0 5px 30px 0 rgba(0, 0, 0, .1);
-    padding: 15px 0;
+    padding: 25px 0;
   }
 
-  $scroll: '.header--scroll';
-
-  &__top-line {
+  &__wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
