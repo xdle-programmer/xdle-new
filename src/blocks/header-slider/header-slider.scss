@@ -184,31 +184,35 @@ $inActiveSlide: '.header-slider__item--inactive';
     &--iphone {
       width: 485px;
       height: 661px;
+      width: 25.48vw;
+      height: 34.73vw;
 
-      @include notebook-big-screen {
-        width: 400px;
-        height: 545px;
-      }
+      //@include notebook-big-screen {
+      //  width: 400px;
+      //  height: 545px;
+      //  width: 27.79vw;
+      //  height: 37.87vw;
+      //}
 
-      @include tablet-big-screen {
-        width: 367px;
-        height: 500px;
-      }
-
-      @include table-small-screen {
-        width: 300px;
-        height: 410px;
-      }
-
+      //@include tablet-big-screen {
+      //  width: 367px;
+      //  height: 500px;
+      //}
+      //
+      //@include table-small-screen {
+      //  width: 300px;
+      //  height: 410px;
+      //}
+      //
       @include mobile-big-screen {
-        width: 270px;
-        height: 368px;
+        width: 50vw;
+        height: 60vw;
       }
-
-      @include notebook-small-screen {
-        width: 215px;
-        height: 293px;
-      }
+      //
+      //@include notebook-small-screen {
+      //  width: 215px;
+      //  height: 293px;
+      //}
 
     }
 
