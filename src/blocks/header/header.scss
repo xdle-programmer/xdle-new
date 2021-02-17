@@ -9,7 +9,11 @@
   top: 0;
   width: 100%;
   padding: 50px 0;
-  z-index: 100;
+  z-index: 500;
+
+  @include notebook-small-screen {
+    padding: 25px 0;
+  }
 
   &--scroll {
     background: rgba(138, 196, 255, .1); // rgba(21, 23, 35, .7);
@@ -26,18 +30,28 @@
     justify-content: space-between;
   }
 
-  .header__logo-menu {
-    display: flex;
-    align-items: center;
+  &__logo {
+    margin-right: 160px;
+    @include tablet-big-screen {
+      margin-right: 40px;
+    }
   }
 
   .logo {
     display: inline-block;
-    margin-right: 160px;
+  }
+
+  &__logo-menu {
+    display: flex;
+    align-items: center;
   }
 
   &__menu {
     display: flex;
+
+    @include notebook-last-screen {
+      display: none;
+    }
   }
 
   &__menu-link {
@@ -45,6 +59,7 @@
     font-size: 18px;
     font-weight: 400;
     line-height: 23px;
+
     &:not(:last-child) {
       margin-right: 60px;
     }
@@ -63,6 +78,13 @@
     font-weight: 400;
     letter-spacing: 0.37px;
     margin-right: 120px;
+
+    @include tablet-big-screen {
+      margin-right: 40px;
+    }
+    @include table-little-screen {
+      display: none;
+    }
   }
 
   &__contact-link--icon {
@@ -72,7 +94,7 @@
     width: 27px;
     height: 27px;
     border-radius: 50%;
-    border: 2px solid rgba(101, 101, 101,.15);
+    border: 2px solid rgba(101, 101, 101, .15);
     margin-right: 10px;
     background-repeat: no-repeat;
     background-position: center;
@@ -80,8 +102,18 @@
     &-phone {
       background-image: url(/images/icons/icon-phone.png);
     }
+
     &-email {
       background-image: url(/images/icons/icon-email.png);
+    }
+  }
+
+  &__button {
+    min-height: 46px;
+    border-width: 1px;
+
+    @include mobile-little-screen {
+      padding: 0 20px;
     }
   }
 
