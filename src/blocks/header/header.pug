@@ -1,28 +1,31 @@
 header.header
-    .header__background
-        .header__background-screen.header__background-screen--full.header__background-screen--resize
-            .header__background-dots
-            .header__background-circle
-
     .header__top
         .layout.header__layout
             .header__wrapper
                 .header__logo-menu
                     .header__logo
                         a(href="#").logo
-                            img(src="src/blocks/header/assets/img/logo.png" width="108").header__logo-image
+                            img(src="images/logo.svg" width="108").header__logo-image
 
+                .header__contact-wrapper
                     .header__menu
                         a(href="#").header__menu-link Работы
                         a(href="#").header__menu-link Контакты
+                    .header__contact
+                        a(href="mailto:info@xdle.ru").header__contact-link
+                            span.header__contact-link--icon.header__contact-link--icon-email
+                            | info@xdle.ru
+                        a(href="tel:+7(812)317-7-157").header__contact-link
+                            span.header__contact-link--icon.header__contact-link--icon-phone
+                            | +7 (812) 317-7-157
+                        a(href="#").header__button.button.button--blue-border Оставить заявку
 
-                .header__contact
-                    a(href="mailto:info@xdle.ru").header__contact-link
-                        span.header__contact-link--icon.header__contact-link--icon-email
-                        | info@xdle.ru
-                    a(href="tel:+7(812)317-7-157").header__contact-link
+                .header__contact-mobile
+                    a(href="tel:+7(812)317-7-157").header__contact-link.header__contact-link--mobile
                         span.header__contact-link--icon.header__contact-link--icon-phone
                         | +7 (812) 317-7-157
-                    a(href="#").header__button.button.button--blue-border Оставить заявку
 
-    include ../header-slider/header-slider
+                    button.burger-menu
+                        span.burger-menu__item
+                        span.burger-menu__item
+                        span.burger-menu__item

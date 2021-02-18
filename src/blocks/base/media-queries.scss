@@ -1,19 +1,25 @@
-$notebook-big-screen: (max-width: 1449px);
+$laptop-big-screen: (max-width: 1439px);
 $tablet-big-screen: (max-width: 1279px);
-$notebook-large-screen: (max-width: 1160px);
-$notebook-small-screen: (max-width: 1100px);
-$notebook-last-screen: (max-width: 1023px);
 
-$table-small-screen: (max-width: 959px);
-$table-little-screen: (max-width: 853px);
+//$tablet-small-screen: (max-width: 1023px);
+
 $mobile-big-screen: (max-width: 767px);
+$mobile-small-screen: (max-width: 480px);
 
-$mobile-small-screen: (max-width: 599px);
-$mobile-little-screen: (max-width: 480px);
+//$notebook-large-screen: (max-width: 1160px);
+//$notebook-small-screen: (max-width: 1100px);
+//$notebook-last-screen: (max-width: 1023px);
+//
+//$table-small-screen: (max-width: 959px);
+//$table-little-screen: (max-width: 853px);
+//
+//
+//$mobile-small-screen: (max-width: 599px);
 
 
-@mixin notebook-big-screen {
-  @media #{$notebook-big-screen} {
+
+@mixin laptop-big-screen {
+  @media #{$laptop-big-screen} {
     @content
   }
 }
@@ -24,35 +30,41 @@ $mobile-little-screen: (max-width: 480px);
   }
 }
 
-@mixin notebook-large-screen {
-  @media #{$notebook-large-screen} {
-    @content
-  }
-}
+//@mixin tablet-small-screen {
+//  @media #{$tablet-small-screen} {
+//    @content
+//  }
+//}
 
-@mixin notebook-small-screen {
-  @media #{$notebook-small-screen} {
-    @content
-  }
-}
-
-@mixin notebook-last-screen {
-  @media #{$notebook-last-screen} {
-    @content
-  }
-}
-
-@mixin table-small-screen {
-  @media #{$table-small-screen} {
-    @content
-  }
-}
-
-@mixin table-little-screen {
-  @media #{$table-little-screen} {
-    @content
-  }
-}
+//@mixin notebook-large-screen {
+//  @media #{$notebook-large-screen} {
+//    @content
+//  }
+//}
+//
+//@mixin notebook-small-screen {
+//  @media #{$notebook-small-screen} {
+//    @content
+//  }
+//}
+//
+//@mixin notebook-last-screen {
+//  @media #{$notebook-last-screen} {
+//    @content
+//  }
+//}
+//
+//@mixin table-small-screen {
+//  @media #{$table-small-screen} {
+//    @content
+//  }
+//}
+//
+//@mixin table-little-screen {
+//  @media #{$table-little-screen} {
+//    @content
+//  }
+//}
 
 @mixin mobile-big-screen {
   @media #{$mobile-big-screen} {
@@ -66,8 +78,8 @@ $mobile-little-screen: (max-width: 480px);
   }
 }
 
-@mixin mobile-little-screen {
-  @media #{$mobile-little-screen} {
-    @content
-  }
-}
+//@mixin mobile-little-screen {
+//  @media #{$mobile-little-screen} {
+//    @content
+//  }
+//}
