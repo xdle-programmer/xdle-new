@@ -7,12 +7,61 @@ $inActiveSlide: '.header-slider__item--inactive';
 
 .header-slider {
   position: relative;
+  padding-top: 140px;
+  overflow: hidden;
+  background: url(assets/img/background-dots.png) no-repeat right 0 bottom 120px;
 
-  //padding-top: 140px;
-  //background: url(assets/img/background-dots.png) no-repeat right 0 bottom 120px;
+  @include tablet-big-screen {
+    padding-top: 100px;
+  }
 
-  @include notebook-last-screen {
-    overflow: hidden;
+  @include mobile-small-screen {
+    padding-bottom: 20px;
+  }
+
+  &__overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f5f5f5;
+    width: 100%;
+    height: calc(100vh - 150px);
+    z-index: 600;
+    &--hide {
+      opacity: 0;
+      visibility: hidden;
+      transform: scale(1.2);
+    }
+  }
+
+  &__overlay-circle {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
+    max-width: 518px;
+    fill: transparent;
+    transition: 0.35s stroke-dashoffset;
+    stroke-dasharray: 1608;
+    stroke-dashoffset: 1608;
+    stroke: #8996ae;
+    stroke-width: 2;
+    &--active {
+      stroke-dashoffset: 0;
+    }
+    svg {
+      display: inline-block;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translate(0, -50%) rotate(-90deg);
+    }
+    circle {
+      transition: all .8s ease-in-out;
+    }
   }
 
   &__wrapper {
@@ -30,7 +79,7 @@ $inActiveSlide: '.header-slider__item--inactive';
     height: calc(100vh - 140px);
     width: 100%;
 
-    @include notebook-small-screen {
+    @include tablet-big-screen {
       height: calc(100vh - 100px);
     }
 
@@ -50,19 +99,23 @@ $inActiveSlide: '.header-slider__item--inactive';
     transform: translate3d(35%, 0, 0);
     transition: all .25s ease-out;
 
-    @include notebook-big-screen {
+    @include laptop-big-screen {
       font-size: 52px;
       line-height: normal;
       margin-bottom: 35px;
     }
 
     @include tablet-big-screen {
-      font-size: 44px;
+      font-size: 3.6vw;
+      margin-bottom: 2.73vw;
     }
 
-    @include table-small-screen {
-      font-size: 36px;
-      margin-bottom: 26px;
+    @include mobile-big-screen {
+      font-size: 5.21vw;
+    }
+
+    @include mobile-small-screen {
+      font-size: 6.25vw;
     }
 
     #{$activeSlide} & {
@@ -85,14 +138,15 @@ $inActiveSlide: '.header-slider__item--inactive';
     font-weight: 300;
     text-transform: uppercase;
 
-    @include notebook-big-screen {
-      font-size: 44px;
+    @include laptop-big-screen {
+      font-size: 3.05vw;
     }
-    @include tablet-big-screen {
-      font-size: 38px;
+
+    @include mobile-big-screen {
+      font-size: 4.17vw;
     }
-    @include table-small-screen {
-      font-size: 32px;
+    @include mobile-small-screen {
+      font-size: 7.08vw;
     }
   }
 
@@ -108,8 +162,9 @@ $inActiveSlide: '.header-slider__item--inactive';
     transition: all .3s ease-out;
     transform: translate3d(50%, 0, 0);
 
-    @include notebook-small-screen {
+    @include tablet-big-screen {
       height: 46px;
+      min-height: auto;
       padding: 0 20px;
       font-size: 13px;
     }
@@ -145,12 +200,13 @@ $inActiveSlide: '.header-slider__item--inactive';
   }
 
   &__image-wrapper {
-    width: 50%;
     opacity: 0;
+    width: 50%;
     transform: translate3d(25%, 0, 0);
 
-    @include notebook-large-screen {
+    @include mobile-big-screen {
       width: auto;
+      margin-bottom: 30px;
     }
 
     #{$activeSlide} & {
@@ -167,72 +223,61 @@ $inActiveSlide: '.header-slider__item--inactive';
   &__content {
     width: 50%;
 
-    @include notebook-large-screen {
+    @include mobile-big-screen {
       width: auto;
     }
-
-    @include mobile-big-screen {
-      margin-top: 30px;
-    }
-
   }
 
   &__image-box {
     position: relative;
     filter: drop-shadow(-50px 0 30px rgba(0, 0, 0, .15));
 
+    @include tablet-big-screen {
+      margin: 0 auto;
+    }
+
     &--iphone {
       width: 485px;
       height: 661px;
-      width: 25.48vw;
-      height: 34.73vw;
 
-      //@include notebook-big-screen {
-      //  width: 400px;
-      //  height: 545px;
-      //  width: 27.79vw;
-      //  height: 37.87vw;
-      //}
-
-      //@include tablet-big-screen {
-      //  width: 367px;
-      //  height: 500px;
-      //}
-      //
-      //@include table-small-screen {
-      //  width: 300px;
-      //  height: 410px;
-      //}
-      //
-      @include mobile-big-screen {
-        width: 50vw;
-        height: 60vw;
+      @include laptop-big-screen {
+        width: 27.77vw;
+        height: 37.84vw;
       }
-      //
-      //@include notebook-small-screen {
-      //  width: 215px;
-      //  height: 293px;
-      //}
 
+      @include mobile-big-screen {
+        width: 35.20vw;
+        height: 47.98vw;
+      }
+
+      @include mobile-small-screen {
+        width: 52.08vw;
+        height: 72.91vw;
+      }
     }
 
     &--mac {
       width: 572px;
       height: 566px;
 
-      @include notebook-big-screen {
-        width: 470px;
-        height: 465px;
+      @include laptop-big-screen {
+        width: 32.64vw;
+        height: 32.30vw;
       }
 
       @include tablet-big-screen {
-        width: 420px;
-        height: 416px;
+        width: 32.8vw;
+        height: 32.5vw;
       }
 
-      @include table-small-screen {
-        width: 300px;
-        height: 297px;
+      @include mobile-big-screen {
+        width: 45.63vw;
+        height: 45.11vw;
+      }
+
+      @include mobile-small-screen {
+        width: 66.65vw;
+        height: 66.04vw;
       }
 
     }
@@ -241,26 +286,19 @@ $inActiveSlide: '.header-slider__item--inactive';
       width: 435px;
       height: 537px;
 
-      @include notebook-big-screen {
-        width: 350px;
-        height: 432px;
-      }
-
-      @include table-small-screen {
-        width: 290px;
-        height: 358px
+      @include laptop-big-screen {
+        width: 24.30vw;
+        height: 30vw;
       }
 
       @include mobile-big-screen {
-        width: 260px;
-        height: 321px;
+        width: 34.55vw;
+        height: 42.63vw;
       }
-
-      @include notebook-small-screen {
-        width: 220px;
-        height: 272px;
+      @include mobile-small-screen {
+        width: 58.33vw;
+        height: 72.08vw;
       }
-
     }
   }
 
@@ -366,12 +404,9 @@ $inActiveSlide: '.header-slider__item--inactive';
     min-height: 600px;
     z-index: 100;
 
-    @include notebook-large-screen {
-      margin-left: 75px;
-    }
-
-    @include mobile-big-screen {
-      margin-left: 15px;
+    @include tablet-big-screen {
+      margin-left: 35px;
+      height: calc(100vh - 100px);
     }
 
     @include mobile-small-screen {
@@ -403,7 +438,7 @@ $inActiveSlide: '.header-slider__item--inactive';
     transition: all .3s ease-out;
     user-select: none;
 
-    @include notebook-small-screen {
+    @include tablet-big-screen {
       width: 120px;
       min-height: 140px;
       justify-content: center;
@@ -411,7 +446,7 @@ $inActiveSlide: '.header-slider__item--inactive';
       line-height: normal;
     }
 
-    @include mobile-little-screen {
+    @include mobile-small-screen {
       font-size: 12px;
       min-height: 120px;
       padding: 10px;
@@ -420,30 +455,22 @@ $inActiveSlide: '.header-slider__item--inactive';
     &:not(:last-child) {
       margin-bottom: 20px;
 
-      @include notebook-small-screen {
+      @include mobile-small-screen {
         margin-bottom: 0;
-        margin-right: 15px;
-      }
-
-      @include mobile-little-screen {
         margin-right: 10px;
       }
     }
 
     &:hover {
       background-color: #ffffff;
+
+      @include tablet-big-screen {
+
+      }
     }
 
     &--active {
       background-color: #ffffff;
-
-      #{$navigation-icon} {
-        &:before {
-          opacity: 1;
-          visibility: visible;
-          transform: scale(1);
-        }
-      }
     }
   }
 
@@ -458,26 +485,11 @@ $inActiveSlide: '.header-slider__item--inactive';
     background-position: center !important;
     margin-bottom: 10px;
 
-    @include notebook-small-screen {
+    @include mobile-big-screen {
       width: 44px;
       height: 44px;
     }
 
-    &:before {
-      position: absolute;
-      top: 0;
-      left: 0;
-      content: '';
-      background: #193464;
-      width: 100%;
-      height: 100%;
-      box-shadow: 5px 4px 16px rgba(0, 0, 0, 0.16);
-      border-radius: 50%;
-      transform: scale(1.2);
-      transition: all .25s ease-out;
-      opacity: 0;
-      visibility: hidden;
-    }
   }
 
 }

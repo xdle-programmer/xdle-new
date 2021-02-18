@@ -1,8 +1,8 @@
 headerScroll();
 
 function headerScroll() {
-    let $topHeader = $('.header__top');
-    let scrollClass = 'header__top--scroll';
+    let $topHeader = $('.header');
+    let scrollClass = 'header--scroll';
 
     checkHeaderPosition();
 
@@ -18,13 +18,25 @@ function headerScroll() {
     }
 }
 
-// function headerHeight() {
-//     let headerHeight = document.querySelector('.header').offsetHeight,
-//         body = document.querySelector('body');
-//     body.style.paddingTop = headerHeight + "px";
-// }
-// headerHeight();
+function mobileMenu() {
+    let burgerButton = $('.burger-menu '),
+        burgerButtonActive = 'burger-menu--active',
+        wrapperMenu = $('.header__contact-wrapper'),
+        wrapperMenuActive = 'header__contact-wrapper--active';
 
+    burgerButton.on('click', function(){
+        $(this).toggleClass(burgerButtonActive);
+        wrapperMenu.toggleClass(wrapperMenuActive);
+    });
+
+    $(window).on('resize scroll', function(){
+        burgerButton.removeClass(burgerButtonActive);
+        wrapperMenu.removeClass(wrapperMenuActive);
+    });
+
+
+}
+mobileMenu();
 
 let catalogMenuName = 'headerMenu';
 
