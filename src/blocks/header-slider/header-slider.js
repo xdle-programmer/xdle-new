@@ -37,7 +37,10 @@ function initSlider() {
     let currentSlide = 0;
     let changeEvent;
 
-    this.test = function (text) {
+    this.nextSlide = function (text) {
+        console.log(text)
+    }
+    this.prevSlide = function (text) {
         console.log(text)
     }
 

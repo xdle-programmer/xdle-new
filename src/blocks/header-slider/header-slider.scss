@@ -477,7 +477,7 @@ $inActiveSlide: '.header-slider__item--inactive';
       background-color: #ffffff;
 
       @include tablet-big-screen {
-        background-color: #ffffff!important;
+        background-color: #ffffff !important;
       }
     }
   }
@@ -497,7 +497,5 @@ $inActiveSlide: '.header-slider__item--inactive';
       width: 44px;
       height: 44px;
     }
-
   }
-
 }
