@@ -1,0 +1,42 @@
+mixin item(title, url)
+    li
+        a(href=url, class=active == title ? 'active' : '')= title
+
+mixin iconSvg(w, h, wp, id)
+    svg(width=w height=h viewBox=wp class=id)
+        use(xlink:href="/images/icons/sprites.svg#"+id)
+
+mixin iconSvgSocial(w, h, wp, id)
+    svg(width=w height=h viewBox=wp class=id)
+        use(xlink:href="/src/blocks/social-link/assets/img/social-sprites.svg#" + id)
+
+mixin img(image, addClass, altImg)
+    if altImg == ""
+        img(src=image alt="Title Image" class=addClass)
+    else
+        img(src=image alt=altImg class=addClass)
+
+mixin radioInput(checked, text)
+    label.radio-button.radio-button--full-style
+        if checked == true
+            input.radio-button__input(type="radio" name="radio" checked="checked")
+        else
+            input.radio-button__input(type="radio" name="radio")
+        span.radio-button__text
+            span.radio-button__status
+            span=text
+
+mixin checkInput(checked, text)
+    label.checkbox-button
+        if checked == true
+            input.checkbox-button__input(type="checkbox" checked="checked" required="")
+        else
+            input.checkbox-button__input(type="checkbox" required="")
+        span.checkbox-button__text
+            span.checkbox-button__status
+            span=text
+
+
+// Images product
+
+- var productSlide1 = ['src/blocks/product-item/assets/img/product-slide1/product-item1.jpg', 'src/blocks/product-item/assets/img/product-slide1/product-item2.jpg', 'src/blocks/product-item/assets/img/product-slide1/product-item3.jpg', 'src/blocks/product-item/assets/img/product-slide1/product-item4.jpg', 'src/blocks/product-item/assets/img/product-slide1/product-item5.jpg']

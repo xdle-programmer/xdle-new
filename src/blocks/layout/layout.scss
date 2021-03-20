@@ -2,30 +2,23 @@
 @import "../../blocks/base/variables";
 @import "../../blocks/base/media-queries";
 
-.layout {
-  max-width: 1450px;
-  width: 100%;
-  @include margin-auto;
-  padding-left: 15px;
-  padding-right: 15px;
+.container {
+  @include laptop-large-screen-min {
+    max-width: 1392px !important;
+  }
+  &--big {
+    @include laptop-large-screen-min {
+      max-width: 1432px !important;
+    }
+  }
 
-  //@media #{$notebook-big-screen}{
-  //  padding-left: 15px;
-  //  padding-right: 15px;
-  //}
 
-  //@media #{$tablet-big-screen}{
-  //
-  //}
-  //
-  //@media #{$mobile-big-screen}{
-  //
-  //}
-}
 
-.layout-small {
-  max-width: 1230px;
-  @include margin-auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  .row>* {
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+  }
 }

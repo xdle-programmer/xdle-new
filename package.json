@@ -11,7 +11,7 @@
     "> 1%",
     "last 3 version"
   ],
-  "author": "Yury Ustinov <yury.ustinov@gmail.com>",
+  "author": "Mateychuck Sergey <xzzmanzzx@gmail.com>",
   "license": "ISC",
   "devDependencies": {
     "@babel/cli": "^7.8.4",
@@ -43,6 +43,8 @@
     "@babel/polyfill": "^7.8.7",
     "chart.js": "^2.9.4",
     "jquery": "^2.1.1",
+    "slick-carousel": "^1.8.1",
+    "svg4everybody": "^2.1.9",
     "swiper": "^6.4.8"
   }
 }
