@@ -1,5 +1,3 @@
-$(window).on('load', overlayLoad());
-
 function overlayLoad() {
     let logo = '.logo';
     let logoLoad = 'logo--load';
@@ -8,24 +6,28 @@ function overlayLoad() {
     let overlayWrapperHide = 'header-slider__overlay--hide';
     let overlayCircle = '.header-slider__overlay-circle';
     let overlayCircleActive = "header-slider__overlay-circle--active";
-    let timeLoadCircle = 1500;
-    let timeLoadLogo = 3000;
-    let fixedLoadLogo = 4500;
-    let overlayHide = 5000;
+    let timeLoadCircle = 0;
+    let timeLoadLogo = 0;
+    let fixedLoadLogo = 1000;
+    let overlayHide = 1500;
 
     timeOutCall(logo, logoLoad, timeLoadLogo);
     timeOutCall(overlayCircle, overlayCircleActive, timeLoadCircle);
     timeOutCall(logo, logoFixed, fixedLoadLogo);
-    timeOutCall(overlayWrapper, overlayWrapperHide, overlayHide);
+    // timeOutCall(overlayWrapper, overlayWrapperHide, overlayHide);
 
     function timeOutCall(element, elementAddClass, time) {
         setTimeout(function () {
             $(element).addClass(elementAddClass);
         }, time);
     }
-}
 
-window.slider = new initSlider()
+    setTimeout(()=>{
+        window.slider = new initSlider();
+    },fixedLoadLogo + 1000)
+
+
+}
 
 function initSlider() {
     let $slides = $('.header-slider__item');
@@ -38,11 +40,11 @@ function initSlider() {
     let changeEvent;
 
     this.nextSlide = function (text) {
-        console.log(text)
-    }
+        console.log(text);
+    };
     this.prevSlide = function (text) {
-        console.log(text)
-    }
+        console.log(text);
+    };
 
     showSlide(currentSlide);
 
@@ -73,8 +75,8 @@ function initSlider() {
         let $slide = $slides.eq(targetSlide);
         $slides.removeClass(slideActiveClass);
         $slides.removeClass(slideInActiveClass);
-        $navigationButtons.removeClass(navigationButtonActiveClass)
-        $navigationButtons.eq(targetSlide).addClass(navigationButtonActiveClass)
+        $navigationButtons.removeClass(navigationButtonActiveClass);
+        $navigationButtons.eq(targetSlide).addClass(navigationButtonActiveClass);
         $slide.addClass(slideActiveClass);
         currentSlide = targetSlide;
     }
@@ -86,4 +88,6 @@ function initSlider() {
     }
 }
 
-
+document.addEventListener("DOMContentLoaded", function(event) {
+    overlayLoad()
+});

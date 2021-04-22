@@ -42,7 +42,6 @@ getFiles(path.resolve(__dirname, './src/blocks'), styleEntryArray, 'css');
 module.exports = {
     mode: 'development',
     entry: {
-        libs: path.resolve(__dirname, './src/libs.js'),
         main: jsEntryArray,
         style: styleEntryArray,
     },

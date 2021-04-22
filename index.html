@@ -7,65 +7,72 @@
   <link href="style.css" rel="stylesheet"></head>
   <body>
 <header class="header">
-  <div class="header__block layout">
-    <div class="header__top-line">
-      <div class="header__logo-menu">
-        <div class="header__logo"><a class="logo" href="#"><img class="header__logo-image" src="src/blocks/header/assets/img/logo.png" width="108"></a></div>
-        <div class="header__menu"><a class="header__menu-link" href="#">Работы</a><a class="header__menu-link" href="#">Контакты</a></div>
+  <div class="header__top">
+    <div class="layout header__layout">
+      <div class="header__wrapper">
+        <div class="header__logo"><a class="logo" href="#"><img class="logo__inner" src="images/logo.svg"></a>
+        </div>
+        <div class="header__contact-wrapper">
+          <div class="header__menu"><a class="header__menu-link" href="#">Работы</a><a class="header__menu-link" href="#">Контакты</a></div>
+          <div class="header__contact"><a class="header__contact-link" href="mailto:info@xdle.ru"><span class="header__contact-link--icon header__contact-link--icon-email"></span>info@xdle.ru</a><a class="header__contact-link" href="tel:+74012658327"><span class="header__contact-link--icon header__contact-link--icon-phone"></span>+7 (4012) 65-83-27</a><a class="header__button button button--blue-border" href="#">Оставить заявку</a></div>
+        </div>
+        <div class="header__contact-mobile"><a class="header__contact-link header__contact-link--mobile" href="tel:+74012658327"><span class="header__contact-link--icon header__contact-link--icon-phone"></span>+7 (4012) 65-83-27</a>
+<button class="burger-menu"><span class="burger-menu__item"></span><span class="burger-menu__item"></span><span class="burger-menu__item"></span></button>
+        </div>
       </div>
-      <div class="header__contact"><a class="header__contact-link" href="mailto:info@xdle.ru"><span class="header__contact-link--icon header__contact-link--icon-email"></span>info@xdle.ru</a><a class="header__contact-link" href="tel:+7(812)317-7-157"><span class="header__contact-link--icon header__contact-link--icon-phone"></span>+7 (812) 317-7-157</a><a class="button button__blue-border" href="#">Оставить заявку</a></div>
     </div>
   </div>
 </header>
+    <div class="scroll-wrapper">
 <div class="header-slider">
   <div class="layout header-slider__wrapper">
     <div class="header-slider__container">
       <div class="header-slider__item">
         <div class="header-slider__image-wrapper">
-          <div class="header-slider__image-iphone">
-            <div class="header-slider__image-item header-slider__image-item--el header-slider__image-item--el-1"><img class="header-slider__image header-slider__image--el header-slider__image-el-1" src="src/blocks/header-slider/assets/img/iphone/iphone-el-1.png" alt=""></div>
-            <div class="header-slider__image-item header-slider__image-item--el header-slider__image-item--el-2"><img class="header-slider__image header-slider__image--el header-slider__image-el-2" src="src/blocks/header-slider/assets/img/iphone/iphone-el-2.png" alt=""></div>
-            <div class="header-slider__image-item header-slider__image-item--el header-slider__image-item--el-3"><img class="header-slider__image header-slider__image--el header-slider__image-el-3" src="src/blocks/header-slider/assets/img/iphone/iphone-el-3.png" alt=""></div>
-            <div class="header-slider__image-item header-slider__image-item--el header-slider__image-item--el-4"><img class="header-slider__image header-slider__image--el header-slider__image-el-4" src="src/blocks/header-slider/assets/img/iphone/iphone-el-4.png" alt=""></div>
-            <div class="header-slider__image-item header-slider__image-item--el header-slider__image-item--el-5"><img class="header-slider__image header-slider__image--el header-slider__image-el-5" src="src/blocks/header-slider/assets/img/iphone/iphone-el-5.png" alt=""></div>
+          <div class="header-slider__image-box header-slider__image-box--iphone">
+            <div class="header-slider__image-item header-slider__image-item--background"><img class="header-slider__image header-slider__image--el-1" src="src/blocks/header-slider/assets/img/iphone/iphone-el-1.png" alt=""></div>
+            <div class="header-slider__image-item header-slider__image-item--iphone-1"><img class="header-slider__image header-slider__image--el-2" src="src/blocks/header-slider/assets/img/iphone/iphone-el-2.png" alt=""></div>
+            <div class="header-slider__image-item header-slider__image-item--iphone-2"><img class="header-slider__image header-slider__image--el-3" src="src/blocks/header-slider/assets/img/iphone/iphone-el-3.png" alt=""></div>
+            <div class="header-slider__image-item header-slider__image-item--iphone-3"><img class="header-slider__image header-slider__image--el-4" src="src/blocks/header-slider/assets/img/iphone/iphone-el-4.png" alt=""></div>
+            <div class="header-slider__image-item header-slider__image-item--iphone-4"><img class="header-slider__image header-slider__image--el-5" src="src/blocks/header-slider/assets/img/iphone/iphone-el-5.png" alt=""></div>
           </div>
         </div>
         <div class="header-slider__content">
           <h3 class="header-slider__title">
             <div class="header-slider__title-inner-small">интерфейсов</div>
             <div class="header-slider__title-inner-big">создание</div>
-          </h3><a class="button button__yellow" href="#">посмотреть проекты</a>
+          </h3><a class="header-slider__button button button--yellow" href="#">посмотреть проекты</a>
         </div>
       </div>
       <div class="header-slider__item">
         <div class="header-slider__image-wrapper">
-          <div class="header-slider__image-mac">
-            <div class="header-slider__image-item header-slider__image-item--el header-slider__image-item--el-9"><img class="header-slider__image header-slider__image--el header-slider__image-el-9" src="src/blocks/header-slider/assets/img/mac/mac-el-9.png" alt=""></div>
-            <div class="header-slider__image-item header-slider__image-item--el header-slider__image-item--el-1"><img class="header-slider__image header-slider__image--el header-slider__image-el-1" src="src/blocks/header-slider/assets/img/mac/mac-el-1.png" alt=""></div>
-            <div class="header-slider__image-item header-slider__image-item--el header-slider__image-item--el-2"><img class="header-slider__image header-slider__image--el header-slider__image-el-2" src="src/blocks/header-slider/assets/img/mac/mac-el-2.png" alt=""></div>
-            <div class="header-slider__image-item header-slider__image-item--el header-slider__image-item--el-3"><img class="header-slider__image header-slider__image--el header-slider__image-el-3" src="src/blocks/header-slider/assets/img/mac/mac-el-3.png" alt=""></div>
-            <div class="header-slider__image-item header-slider__image-item--el header-slider__image-item--el-4"><img class="header-slider__image header-slider__image--el header-slider__image-el-4" src="src/blocks/header-slider/assets/img/mac/mac-el-4.png" alt=""></div>
-            <div class="header-slider__image-item header-slider__image-item--el header-slider__image-item--el-5"><img class="header-slider__image header-slider__image--el header-slider__image-el-5" src="src/blocks/header-slider/assets/img/mac/mac-el-5.png" alt=""></div>
-            <div class="header-slider__image-item header-slider__image-item--el header-slider__image-item--el-6"><img class="header-slider__image header-slider__image--el header-slider__image-el-6" src="src/blocks/header-slider/assets/img/mac/mac-el-6.png" alt=""></div>
-            <div class="header-slider__image-item header-slider__image-item--el header-slider__image-item--el-7"><img class="header-slider__image header-slider__image--el header-slider__image-el-7" src="src/blocks/header-slider/assets/img/mac/mac-el-7.png" alt=""></div>
-            <div class="header-slider__image-item header-slider__image-item--el header-slider__image-item--el-8"><img class="header-slider__image header-slider__image--el header-slider__image-el-8" src="src/blocks/header-slider/assets/img/mac/mac-el-8.png" alt=""></div>
-            <div class="header-slider__image-item header-slider__image-item--el header-slider__image-item--el-10"><img class="header-slider__image header-slider__image--el header-slider__image-el-10" src="src/blocks/header-slider/assets/img/mac/mac-el-10.png" alt=""></div>
-            <div class="header-slider__image-item header-slider__image-item--el header-slider__image-item--el-11"><img class="header-slider__image header-slider__image--el header-slider__image-el-11" src="src/blocks/header-slider/assets/img/mac/mac-el-11.png" alt=""></div>
+          <div class="header-slider__image-box header-slider__image-box--mac">
+            <div class="header-slider__image-item header-slider__image-item--background"><img class="header-slider__image header-slider__image--el-1" src="src/blocks/header-slider/assets/img/mac/mac-el-1.png" alt=""></div>
+            <div class="header-slider__image-item header-slider__image-item--mac-1"><img class="header-slider__image header-slider__image--el-2" src="src/blocks/header-slider/assets/img/mac/mac-el-2.png" alt=""></div>
+            <div class="header-slider__image-item header-slider__image-item--mac-2"><img class="header-slider__image header-slider__image--el-3" src="src/blocks/header-slider/assets/img/mac/mac-el-3.png" alt=""></div>
+            <div class="header-slider__image-item header-slider__image-item--mac-3"><img class="header-slider__image header-slider__image--el-4" src="src/blocks/header-slider/assets/img/mac/mac-el-4.png" alt=""></div>
+            <div class="header-slider__image-item header-slider__image-item--mac-4"><img class="header-slider__image header-slider__image--el-5" src="src/blocks/header-slider/assets/img/mac/mac-el-5.png" alt=""></div>
+            <div class="header-slider__image-item header-slider__image-item--mac-5"><img class="header-slider__image header-slider__image--el-6" src="src/blocks/header-slider/assets/img/mac/mac-el-6.png" alt=""></div>
+            <div class="header-slider__image-item header-slider__image-item--mac-6"><img class="header-slider__image header-slider__image--el-7" src="src/blocks/header-slider/assets/img/mac/mac-el-7.png" alt=""></div>
+            <div class="header-slider__image-item header-slider__image-item--mac-7"><img class="header-slider__image header-slider__image--el-8" src="src/blocks/header-slider/assets/img/mac/mac-el-8.png" alt=""></div>
+            <div class="header-slider__image-item header-slider__image-item--mac-8"><img class="header-slider__image header-slider__image--el-9" src="src/blocks/header-slider/assets/img/mac/mac-el-9.png" alt=""></div>
+            <div class="header-slider__image-item header-slider__image-item--mac-9"><img class="header-slider__image header-slider__image--el-10" src="src/blocks/header-slider/assets/img/mac/mac-el-10.png" alt=""></div>
+            <div class="header-slider__image-item header-slider__image-item--mac-10"><img class="header-slider__image header-slider__image--el-11" src="src/blocks/header-slider/assets/img/mac/mac-el-11.png" alt=""></div>
           </div>
         </div>
         <div class="header-slider__content">
           <h3 class="header-slider__title">
             <div class="header-slider__title-inner-small">интерфейсов</div>
             <div class="header-slider__title-inner-big">создание</div>
-          </h3><a class="button button__yellow" href="#">посмотреть проекты</a>
+          </h3><a class="header-slider__button button button--yellow" href="#">посмотреть проекты</a>
         </div>
       </div>
       <div class="header-slider__item">
         <div class="header-slider__image-wrapper">
-          <div class="header-slider__image-interface">
-            <div class="header-slider__image-item header-slider__image-item--el header-slider__image-item--el-1"><img class="header-slider__image header-slider__image--el header-slider__image-el-1" src="src/blocks/header-slider/assets/img/interface/interface-el-1.png" alt=""></div>
-            <div class="header-slider__image-item header-slider__image-item--el header-slider__image-item--el-2"><img class="header-slider__image header-slider__image--el header-slider__image-el-2" src="src/blocks/header-slider/assets/img/interface/interface-el-2.png" alt=""></div>
-            <div class="header-slider__image-item header-slider__image-item--el header-slider__image-item--el-3"><img class="header-slider__image header-slider__image--el header-slider__image-el-3" src="src/blocks/header-slider/assets/img/interface/interface-el-3.png" alt=""></div>
+          <div class="header-slider__image-box header-slider__image-box--interface">
+            <div class="header-slider__image-item header-slider__image-item--background"><img class="header-slider__image header-slider__image--el-1" src="src/blocks/header-slider/assets/img/interface/interface-el-1.png" alt=""></div>
+            <div class="header-slider__image-item header-slider__image-item--interface-1"><img class="header-slider__image header-slider__image--el-2" src="src/blocks/header-slider/assets/img/interface/interface-el-2.png" alt=""></div>
+            <div class="header-slider__image-item header-slider__image-item--interface-2"><img class="header-slider__image header-slider__image--el-3" src="src/blocks/header-slider/assets/img/interface/interface-el-3.png" alt=""></div>
           </div>
         </div>
         <div class="header-slider__content">
@@ -77,10 +84,10 @@
       </div>
     </div>
     <div class="header-slider__navigation">
-      <div class="header-slider__navigation-item">
+      <div class="header-slider__navigation-item header-slider__navigation-item--active">
         <div class="header-slider__navigation-icon" style="background: url(src/blocks/header-slider/assets/img/icon-phone.png)"></div>Мобильные приложения
       </div>
-      <div class="header-slider__navigation-item header-slider__navigation-item--active">
+      <div class="header-slider__navigation-item">
         <div class="header-slider__navigation-icon" style="background: url(src/blocks/header-slider/assets/img/icon-earth.png)"></div>Создание сайтов
       </div>
       <div class="header-slider__navigation-item">
@@ -127,5 +134,6 @@
     </div>
   </div>
 </div>
+    </div>
   <script src="libs.js"></script><script src="main.js"></script><script src="style.js"></script></body>
 </html>
