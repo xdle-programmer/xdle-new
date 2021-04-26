@@ -10,7 +10,7 @@
   padding: 50px 0;
   z-index: 800;
 
-  @include tablet-big-screen {
+  @include laptop-big-screen {
     padding: 25px 0;
   }
 
@@ -21,7 +21,9 @@
     padding: 25px 0;
   }
 
-  $scroll: '.header__top--scroll';
+
+  $scroll: '.header--scroll';
+  $show: '.header--show';
 
   &__wrapper {
     display: flex;
@@ -42,6 +44,7 @@
 
   &__menu {
     display: flex;
+
 
     @include tablet-big-screen {
       width: 100%;
@@ -75,6 +78,11 @@
     justify-content: space-between;
     align-items: center;
     transition: all .2s ease-out;
+    opacity: 0;
+
+    #{$show} & {
+      opacity: 1;
+    }
 
     @include tablet-big-screen {
       position: absolute;

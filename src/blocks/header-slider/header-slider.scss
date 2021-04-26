@@ -9,7 +9,6 @@ $inActiveSlide: '.header-slider__item--inactive';
   position: relative;
   padding-top: 140px;
   overflow: hidden;
-  background: url(assets/img/background-dots.png) no-repeat right 0 bottom 120px;
 
   @include tablet-big-screen {
     padding-top: 100px;
@@ -17,6 +16,30 @@ $inActiveSlide: '.header-slider__item--inactive';
 
   @include mobile-small-screen {
     padding-bottom: 20px;
+  }
+
+  &__dots {
+    position: absolute;
+    width: 10vw;
+    height: 30vw;
+    background: #455aa1;
+    right: 0;
+    top: 35%;
+    background: url(assets/img/background-dots.png);
+    @include background-contain-center;
+    background-position: center right;
+    transition: .3s linear;
+  }
+
+  &__circle {
+    transition: .3s linear;
+    position: absolute;
+    width: 80vw;
+    height: 80vw;
+    left: -20%;
+    bottom: 60%;
+    border-radius: 50%;
+    border: 5vw solid #dfe1e6;
   }
 
   &__overlay {
@@ -203,10 +226,16 @@ $inActiveSlide: '.header-slider__item--inactive';
     }
   }
 
+
+
   &__image-wrapper {
     opacity: 0;
-    width: 50%;
+    width: 40%;
     transform: translate3d(25%, 0, 0);
+
+    @include laptop-big-screen {
+      width: 35%;
+    }
 
     @include mobile-big-screen {
       width: auto;
@@ -225,7 +254,11 @@ $inActiveSlide: '.header-slider__item--inactive';
   }
 
   &__content {
-    width: 50%;
+    width: 60%;
+
+    @include laptop-big-screen {
+      width: 65%;
+    }
 
     @include mobile-big-screen {
       width: auto;
@@ -399,7 +432,7 @@ $inActiveSlide: '.header-slider__item--inactive';
   }
 
   &__navigation {
-    position: relative;
+    position: absolute;
     height: calc(100vh - 140px);
     margin-left: 135px;
     display: flex;
@@ -407,9 +440,12 @@ $inActiveSlide: '.header-slider__item--inactive';
     justify-content: center;
     min-height: 600px;
     z-index: 100;
+    right: 2vw;
+    top: calc(50% + 50px + 46px);
+    transform: translateY(-50%);
 
-    @include tablet-big-screen {
-      margin-left: 35px;
+    @include laptop-big-screen {
+      top: calc(50% + 25px + 46px);
       height: calc(100vh - 100px);
     }
 

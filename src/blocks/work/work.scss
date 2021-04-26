@@ -9,17 +9,7 @@
   &__item {
     position: relative;
     padding-bottom: 100%;
-    &:hover {
-      .work__item-content {
-        transform: scale(1);
-        opacity: 1;
-        visibility: visible;
-      }
-    }
 
-    @include tablet-big-screen {
-      padding-bottom: 200%;
-    }
   }
 
   &__item-image {

@@ -13,7 +13,10 @@
         <div class="header__logo"><a class="logo" href="#"><img class="logo__inner" src="images/logo.svg"></a>
         </div>
         <div class="header__contact-wrapper">
-          <div class="header__menu"><a class="header__menu-link" href="#">Работы</a><a class="header__menu-link" href="#">Контакты</a></div>
+          <div class="header__menu">
+            <!--a(href="#").header__menu-link Работы-->
+            <!--a(href="#").header__menu-link Контакты-->
+          </div>
           <div class="header__contact"><a class="header__contact-link" href="mailto:info@xdle.ru"><span class="header__contact-link--icon header__contact-link--icon-email"></span>info@xdle.ru</a><a class="header__contact-link" href="tel:+74012658327"><span class="header__contact-link--icon header__contact-link--icon-phone"></span>+7 (4012) 65-83-27</a><a class="header__button button button--blue-border" href="#">Оставить заявку</a></div>
         </div>
         <div class="header__contact-mobile"><a class="header__contact-link header__contact-link--mobile" href="tel:+74012658327"><span class="header__contact-link--icon header__contact-link--icon-phone"></span>+7 (4012) 65-83-27</a>
@@ -25,25 +28,10 @@
 </header>
     <div class="scroll-wrapper">
 <div class="header-slider">
+  <div class="header-slider__circle"></div>
+  <div class="header-slider__dots"></div>
   <div class="layout header-slider__wrapper">
     <div class="header-slider__container">
-      <div class="header-slider__item">
-        <div class="header-slider__image-wrapper">
-          <div class="header-slider__image-box header-slider__image-box--iphone">
-            <div class="header-slider__image-item header-slider__image-item--background"><img class="header-slider__image header-slider__image--el-1" src="src/blocks/header-slider/assets/img/iphone/iphone-el-1.png" alt=""></div>
-            <div class="header-slider__image-item header-slider__image-item--iphone-1"><img class="header-slider__image header-slider__image--el-2" src="src/blocks/header-slider/assets/img/iphone/iphone-el-2.png" alt=""></div>
-            <div class="header-slider__image-item header-slider__image-item--iphone-2"><img class="header-slider__image header-slider__image--el-3" src="src/blocks/header-slider/assets/img/iphone/iphone-el-3.png" alt=""></div>
-            <div class="header-slider__image-item header-slider__image-item--iphone-3"><img class="header-slider__image header-slider__image--el-4" src="src/blocks/header-slider/assets/img/iphone/iphone-el-4.png" alt=""></div>
-            <div class="header-slider__image-item header-slider__image-item--iphone-4"><img class="header-slider__image header-slider__image--el-5" src="src/blocks/header-slider/assets/img/iphone/iphone-el-5.png" alt=""></div>
-          </div>
-        </div>
-        <div class="header-slider__content">
-          <h3 class="header-slider__title">
-            <div class="header-slider__title-inner-small">интерфейсов</div>
-            <div class="header-slider__title-inner-big">создание</div>
-          </h3><a class="header-slider__button button button--yellow" href="#">посмотреть проекты</a>
-        </div>
-      </div>
       <div class="header-slider__item">
         <div class="header-slider__image-wrapper">
           <div class="header-slider__image-box header-slider__image-box--mac">
@@ -62,8 +50,8 @@
         </div>
         <div class="header-slider__content">
           <h3 class="header-slider__title">
-            <div class="header-slider__title-inner-small">интерфейсов</div>
-            <div class="header-slider__title-inner-big">создание</div>
+            <div class="header-slider__title-inner-small">создание</div>
+            <div class="header-slider__title-inner-big">сайтов</div>
           </h3><a class="header-slider__button button button--yellow" href="#">посмотреть проекты</a>
         </div>
       </div>
@@ -77,57 +65,392 @@
         </div>
         <div class="header-slider__content">
           <h3 class="header-slider__title">
-            <div class="header-slider__title-inner-small">интерфейсов</div>
             <div class="header-slider__title-inner-big">создание</div>
+            <div class="header-slider__title-inner-small">интерфейсов</div>
+          </h3><a class="header-slider__button button button--yellow" href="#">посмотреть проекты</a>
+        </div>
+      </div>
+      <div class="header-slider__item">
+        <div class="header-slider__image-wrapper">
+          <div class="header-slider__image-box header-slider__image-box--iphone">
+            <div class="header-slider__image-item header-slider__image-item--background"><img class="header-slider__image header-slider__image--el-1" src="src/blocks/header-slider/assets/img/iphone/iphone-el-1.png" alt=""></div>
+            <div class="header-slider__image-item header-slider__image-item--iphone-1"><img class="header-slider__image header-slider__image--el-2" src="src/blocks/header-slider/assets/img/iphone/iphone-el-2.png" alt=""></div>
+            <div class="header-slider__image-item header-slider__image-item--iphone-2"><img class="header-slider__image header-slider__image--el-3" src="src/blocks/header-slider/assets/img/iphone/iphone-el-3.png" alt=""></div>
+            <div class="header-slider__image-item header-slider__image-item--iphone-3"><img class="header-slider__image header-slider__image--el-4" src="src/blocks/header-slider/assets/img/iphone/iphone-el-4.png" alt=""></div>
+            <div class="header-slider__image-item header-slider__image-item--iphone-4"><img class="header-slider__image header-slider__image--el-5" src="src/blocks/header-slider/assets/img/iphone/iphone-el-5.png" alt=""></div>
+          </div>
+        </div>
+        <div class="header-slider__content">
+          <h3 class="header-slider__title">
+            <div class="header-slider__title-inner-big">создание</div>
+            <div class="header-slider__title-inner-small">мобильных приложений</div>
           </h3><a class="header-slider__button button button--yellow" href="#">посмотреть проекты</a>
         </div>
       </div>
     </div>
     <div class="header-slider__navigation">
-      <div class="header-slider__navigation-item header-slider__navigation-item--active">
-        <div class="header-slider__navigation-icon" style="background: url(src/blocks/header-slider/assets/img/icon-phone.png)"></div>Мобильные приложения
-      </div>
       <div class="header-slider__navigation-item">
         <div class="header-slider__navigation-icon" style="background: url(src/blocks/header-slider/assets/img/icon-earth.png)"></div>Создание сайтов
       </div>
       <div class="header-slider__navigation-item">
         <div class="header-slider__navigation-icon" style="background: url(src/blocks/header-slider/assets/img/icon-setting.png)"></div>Создание интерфейсов
       </div>
+      <div class="header-slider__navigation-item">
+        <div class="header-slider__navigation-icon" style="background: url(src/blocks/header-slider/assets/img/icon-phone.png)"></div>Мобильные приложения
+      </div>
     </div>
   </div>
 </div>
 <div class="work">
-  <div class="work__item"><img class="work__item-image" src="src/blocks/work/assets/img/work-image1.jpg">
+  <div class="work__item"><img class="work__item-image" src="images/work-preview-small/admiral.jpg">
     <div class="work__item-content">
       <div class="work__item-title">Title Name</div>
       <div class="work__item-desc">Desc text content. Lorem</div><a class="work__item-link" href="#">Link work view</a>
     </div>
   </div>
-  <div class="work__item"><img class="work__item-image" src="src/blocks/work/assets/img/work-image2.jpg">
+  <div class="work__item"><img class="work__item-image" src="images/work-preview-small/afisha-light.jpg">
     <div class="work__item-content">
       <div class="work__item-title">Title Name</div>
       <div class="work__item-desc">Desc text content. Lorem</div><a class="work__item-link" href="#">Link work view</a>
     </div>
   </div>
-  <div class="work__item"><img class="work__item-image" src="src/blocks/work/assets/img/work-image3.jpg">
+  <div class="work__item"><img class="work__item-image" src="images/work-preview-small/afisha.jpg">
     <div class="work__item-content">
       <div class="work__item-title">Title Name</div>
       <div class="work__item-desc">Desc text content. Lorem</div><a class="work__item-link" href="#">Link work view</a>
     </div>
   </div>
-  <div class="work__item"><img class="work__item-image" src="src/blocks/work/assets/img/work-image4.jpg">
+  <div class="work__item"><img class="work__item-image" src="images/work-preview-small/animation.jpg">
     <div class="work__item-content">
       <div class="work__item-title">Title Name</div>
       <div class="work__item-desc">Desc text content. Lorem</div><a class="work__item-link" href="#">Link work view</a>
     </div>
   </div>
-  <div class="work__item"><img class="work__item-image" src="src/blocks/work/assets/img/work-image5.jpg">
+  <div class="work__item"><img class="work__item-image" src="images/work-preview-small/aplica.jpg">
     <div class="work__item-content">
       <div class="work__item-title">Title Name</div>
       <div class="work__item-desc">Desc text content. Lorem</div><a class="work__item-link" href="#">Link work view</a>
     </div>
   </div>
-  <div class="work__item"><img class="work__item-image" src="src/blocks/work/assets/img/work-image6.jpg">
+  <div class="work__item"><img class="work__item-image" src="images/work-preview-small/apteka.jpg">
+    <div class="work__item-content">
+      <div class="work__item-title">Title Name</div>
+      <div class="work__item-desc">Desc text content. Lorem</div><a class="work__item-link" href="#">Link work view</a>
+    </div>
+  </div>
+  <div class="work__item"><img class="work__item-image" src="images/work-preview-small/auto-tips.jpg">
+    <div class="work__item-content">
+      <div class="work__item-title">Title Name</div>
+      <div class="work__item-desc">Desc text content. Lorem</div><a class="work__item-link" href="#">Link work view</a>
+    </div>
+  </div>
+  <div class="work__item"><img class="work__item-image" src="images/work-preview-small/bersus.jpg">
+    <div class="work__item-content">
+      <div class="work__item-title">Title Name</div>
+      <div class="work__item-desc">Desc text content. Lorem</div><a class="work__item-link" href="#">Link work view</a>
+    </div>
+  </div>
+  <div class="work__item"><img class="work__item-image" src="images/work-preview-small/bismap.jpg">
+    <div class="work__item-content">
+      <div class="work__item-title">Title Name</div>
+      <div class="work__item-desc">Desc text content. Lorem</div><a class="work__item-link" href="#">Link work view</a>
+    </div>
+  </div>
+  <div class="work__item"><img class="work__item-image" src="images/work-preview-small/cargo.jpg">
+    <div class="work__item-content">
+      <div class="work__item-title">Title Name</div>
+      <div class="work__item-desc">Desc text content. Lorem</div><a class="work__item-link" href="#">Link work view</a>
+    </div>
+  </div>
+  <div class="work__item"><img class="work__item-image" src="images/work-preview-small/case.jpg">
+    <div class="work__item-content">
+      <div class="work__item-title">Title Name</div>
+      <div class="work__item-desc">Desc text content. Lorem</div><a class="work__item-link" href="#">Link work view</a>
+    </div>
+  </div>
+  <div class="work__item"><img class="work__item-image" src="images/work-preview-small/chehly.jpg">
+    <div class="work__item-content">
+      <div class="work__item-title">Title Name</div>
+      <div class="work__item-desc">Desc text content. Lorem</div><a class="work__item-link" href="#">Link work view</a>
+    </div>
+  </div>
+  <div class="work__item"><img class="work__item-image" src="images/work-preview-small/cirque.jpg">
+    <div class="work__item-content">
+      <div class="work__item-title">Title Name</div>
+      <div class="work__item-desc">Desc text content. Lorem</div><a class="work__item-link" href="#">Link work view</a>
+    </div>
+  </div>
+  <div class="work__item"><img class="work__item-image" src="images/work-preview-small/domdara.jpg">
+    <div class="work__item-content">
+      <div class="work__item-title">Title Name</div>
+      <div class="work__item-desc">Desc text content. Lorem</div><a class="work__item-link" href="#">Link work view</a>
+    </div>
+  </div>
+  <div class="work__item"><img class="work__item-image" src="images/work-preview-small/domzalogov.jpg">
+    <div class="work__item-content">
+      <div class="work__item-title">Title Name</div>
+      <div class="work__item-desc">Desc text content. Lorem</div><a class="work__item-link" href="#">Link work view</a>
+    </div>
+  </div>
+  <div class="work__item"><img class="work__item-image" src="images/work-preview-small/dvizhparty.jpg">
+    <div class="work__item-content">
+      <div class="work__item-title">Title Name</div>
+      <div class="work__item-desc">Desc text content. Lorem</div><a class="work__item-link" href="#">Link work view</a>
+    </div>
+  </div>
+  <div class="work__item"><img class="work__item-image" src="images/work-preview-small/factory.jpg">
+    <div class="work__item-content">
+      <div class="work__item-title">Title Name</div>
+      <div class="work__item-desc">Desc text content. Lorem</div><a class="work__item-link" href="#">Link work view</a>
+    </div>
+  </div>
+  <div class="work__item"><img class="work__item-image" src="images/work-preview-small/finift.jpg">
+    <div class="work__item-content">
+      <div class="work__item-title">Title Name</div>
+      <div class="work__item-desc">Desc text content. Lorem</div><a class="work__item-link" href="#">Link work view</a>
+    </div>
+  </div>
+  <div class="work__item"><img class="work__item-image" src="images/work-preview-small/fr.jpg">
+    <div class="work__item-content">
+      <div class="work__item-title">Title Name</div>
+      <div class="work__item-desc">Desc text content. Lorem</div><a class="work__item-link" href="#">Link work view</a>
+    </div>
+  </div>
+  <div class="work__item"><img class="work__item-image" src="images/work-preview-small/frichelli.jpg">
+    <div class="work__item-content">
+      <div class="work__item-title">Title Name</div>
+      <div class="work__item-desc">Desc text content. Lorem</div><a class="work__item-link" href="#">Link work view</a>
+    </div>
+  </div>
+  <div class="work__item"><img class="work__item-image" src="images/work-preview-small/gdeapteka.jpg">
+    <div class="work__item-content">
+      <div class="work__item-title">Title Name</div>
+      <div class="work__item-desc">Desc text content. Lorem</div><a class="work__item-link" href="#">Link work view</a>
+    </div>
+  </div>
+  <div class="work__item"><img class="work__item-image" src="images/work-preview-small/gmarket.jpg">
+    <div class="work__item-content">
+      <div class="work__item-title">Title Name</div>
+      <div class="work__item-desc">Desc text content. Lorem</div><a class="work__item-link" href="#">Link work view</a>
+    </div>
+  </div>
+  <div class="work__item"><img class="work__item-image" src="images/work-preview-small/golden-marrow.jpg">
+    <div class="work__item-content">
+      <div class="work__item-title">Title Name</div>
+      <div class="work__item-desc">Desc text content. Lorem</div><a class="work__item-link" href="#">Link work view</a>
+    </div>
+  </div>
+  <div class="work__item"><img class="work__item-image" src="images/work-preview-small/goodrent.jpg">
+    <div class="work__item-content">
+      <div class="work__item-title">Title Name</div>
+      <div class="work__item-desc">Desc text content. Lorem</div><a class="work__item-link" href="#">Link work view</a>
+    </div>
+  </div>
+  <div class="work__item"><img class="work__item-image" src="images/work-preview-small/gruzship.jpg">
+    <div class="work__item-content">
+      <div class="work__item-title">Title Name</div>
+      <div class="work__item-desc">Desc text content. Lorem</div><a class="work__item-link" href="#">Link work view</a>
+    </div>
+  </div>
+  <div class="work__item"><img class="work__item-image" src="images/work-preview-small/gt-autolab.jpg">
+    <div class="work__item-content">
+      <div class="work__item-title">Title Name</div>
+      <div class="work__item-desc">Desc text content. Lorem</div><a class="work__item-link" href="#">Link work view</a>
+    </div>
+  </div>
+  <div class="work__item"><img class="work__item-image" src="images/work-preview-small/iola.jpg">
+    <div class="work__item-content">
+      <div class="work__item-title">Title Name</div>
+      <div class="work__item-desc">Desc text content. Lorem</div><a class="work__item-link" href="#">Link work view</a>
+    </div>
+  </div>
+  <div class="work__item"><img class="work__item-image" src="images/work-preview-small/ist-nova.jpg">
+    <div class="work__item-content">
+      <div class="work__item-title">Title Name</div>
+      <div class="work__item-desc">Desc text content. Lorem</div><a class="work__item-link" href="#">Link work view</a>
+    </div>
+  </div>
+  <div class="work__item"><img class="work__item-image" src="images/work-preview-small/jakuba-new.jpg">
+    <div class="work__item-content">
+      <div class="work__item-title">Title Name</div>
+      <div class="work__item-desc">Desc text content. Lorem</div><a class="work__item-link" href="#">Link work view</a>
+    </div>
+  </div>
+  <div class="work__item"><img class="work__item-image" src="images/work-preview-small/jakuba.jpg">
+    <div class="work__item-content">
+      <div class="work__item-title">Title Name</div>
+      <div class="work__item-desc">Desc text content. Lorem</div><a class="work__item-link" href="#">Link work view</a>
+    </div>
+  </div>
+  <div class="work__item"><img class="work__item-image" src="images/work-preview-small/kaizerdom.jpg">
+    <div class="work__item-content">
+      <div class="work__item-title">Title Name</div>
+      <div class="work__item-desc">Desc text content. Lorem</div><a class="work__item-link" href="#">Link work view</a>
+    </div>
+  </div>
+  <div class="work__item"><img class="work__item-image" src="images/work-preview-small/leaf-garden.jpg">
+    <div class="work__item-content">
+      <div class="work__item-title">Title Name</div>
+      <div class="work__item-desc">Desc text content. Lorem</div><a class="work__item-link" href="#">Link work view</a>
+    </div>
+  </div>
+  <div class="work__item"><img class="work__item-image" src="images/work-preview-small/lider-kids.jpg">
+    <div class="work__item-content">
+      <div class="work__item-title">Title Name</div>
+      <div class="work__item-desc">Desc text content. Lorem</div><a class="work__item-link" href="#">Link work view</a>
+    </div>
+  </div>
+  <div class="work__item"><img class="work__item-image" src="images/work-preview-small/ljashenko.jpg">
+    <div class="work__item-content">
+      <div class="work__item-title">Title Name</div>
+      <div class="work__item-desc">Desc text content. Lorem</div><a class="work__item-link" href="#">Link work view</a>
+    </div>
+  </div>
+  <div class="work__item"><img class="work__item-image" src="images/work-preview-small/messenger.jpg">
+    <div class="work__item-content">
+      <div class="work__item-title">Title Name</div>
+      <div class="work__item-desc">Desc text content. Lorem</div><a class="work__item-link" href="#">Link work view</a>
+    </div>
+  </div>
+  <div class="work__item"><img class="work__item-image" src="images/work-preview-small/mfn.jpg">
+    <div class="work__item-content">
+      <div class="work__item-title">Title Name</div>
+      <div class="work__item-desc">Desc text content. Lorem</div><a class="work__item-link" href="#">Link work view</a>
+    </div>
+  </div>
+  <div class="work__item"><img class="work__item-image" src="images/work-preview-small/mining.jpg">
+    <div class="work__item-content">
+      <div class="work__item-title">Title Name</div>
+      <div class="work__item-desc">Desc text content. Lorem</div><a class="work__item-link" href="#">Link work view</a>
+    </div>
+  </div>
+  <div class="work__item"><img class="work__item-image" src="images/work-preview-small/moneparser.jpg">
+    <div class="work__item-content">
+      <div class="work__item-title">Title Name</div>
+      <div class="work__item-desc">Desc text content. Lorem</div><a class="work__item-link" href="#">Link work view</a>
+    </div>
+  </div>
+  <div class="work__item"><img class="work__item-image" src="images/work-preview-small/neoline.jpg">
+    <div class="work__item-content">
+      <div class="work__item-title">Title Name</div>
+      <div class="work__item-desc">Desc text content. Lorem</div><a class="work__item-link" href="#">Link work view</a>
+    </div>
+  </div>
+  <div class="work__item"><img class="work__item-image" src="images/work-preview-small/new-click.jpg">
+    <div class="work__item-content">
+      <div class="work__item-title">Title Name</div>
+      <div class="work__item-desc">Desc text content. Lorem</div><a class="work__item-link" href="#">Link work view</a>
+    </div>
+  </div>
+  <div class="work__item"><img class="work__item-image" src="images/work-preview-small/opensii.jpg">
+    <div class="work__item-content">
+      <div class="work__item-title">Title Name</div>
+      <div class="work__item-desc">Desc text content. Lorem</div><a class="work__item-link" href="#">Link work view</a>
+    </div>
+  </div>
+  <div class="work__item"><img class="work__item-image" src="images/work-preview-small/pharma.jpg">
+    <div class="work__item-content">
+      <div class="work__item-title">Title Name</div>
+      <div class="work__item-desc">Desc text content. Lorem</div><a class="work__item-link" href="#">Link work view</a>
+    </div>
+  </div>
+  <div class="work__item"><img class="work__item-image" src="images/work-preview-small/phonebot.jpg">
+    <div class="work__item-content">
+      <div class="work__item-title">Title Name</div>
+      <div class="work__item-desc">Desc text content. Lorem</div><a class="work__item-link" href="#">Link work view</a>
+    </div>
+  </div>
+  <div class="work__item"><img class="work__item-image" src="images/work-preview-small/ps.jpg">
+    <div class="work__item-content">
+      <div class="work__item-title">Title Name</div>
+      <div class="work__item-desc">Desc text content. Lorem</div><a class="work__item-link" href="#">Link work view</a>
+    </div>
+  </div>
+  <div class="work__item"><img class="work__item-image" src="images/work-preview-small/quest.jpg">
+    <div class="work__item-content">
+      <div class="work__item-title">Title Name</div>
+      <div class="work__item-desc">Desc text content. Lorem</div><a class="work__item-link" href="#">Link work view</a>
+    </div>
+  </div>
+  <div class="work__item"><img class="work__item-image" src="images/work-preview-small/remont.jpg">
+    <div class="work__item-content">
+      <div class="work__item-title">Title Name</div>
+      <div class="work__item-desc">Desc text content. Lorem</div><a class="work__item-link" href="#">Link work view</a>
+    </div>
+  </div>
+  <div class="work__item"><img class="work__item-image" src="images/work-preview-small/remship.jpg">
+    <div class="work__item-content">
+      <div class="work__item-title">Title Name</div>
+      <div class="work__item-desc">Desc text content. Lorem</div><a class="work__item-link" href="#">Link work view</a>
+    </div>
+  </div>
+  <div class="work__item"><img class="work__item-image" src="images/work-preview-small/sibhome.jpg">
+    <div class="work__item-content">
+      <div class="work__item-title">Title Name</div>
+      <div class="work__item-desc">Desc text content. Lorem</div><a class="work__item-link" href="#">Link work view</a>
+    </div>
+  </div>
+  <div class="work__item"><img class="work__item-image" src="images/work-preview-small/skorochtenie.jpg">
+    <div class="work__item-content">
+      <div class="work__item-title">Title Name</div>
+      <div class="work__item-desc">Desc text content. Lorem</div><a class="work__item-link" href="#">Link work view</a>
+    </div>
+  </div>
+  <div class="work__item"><img class="work__item-image" src="images/work-preview-small/souveniroff.jpg">
+    <div class="work__item-content">
+      <div class="work__item-title">Title Name</div>
+      <div class="work__item-desc">Desc text content. Lorem</div><a class="work__item-link" href="#">Link work view</a>
+    </div>
+  </div>
+  <div class="work__item"><img class="work__item-image" src="images/work-preview-small/suenko.jpg">
+    <div class="work__item-content">
+      <div class="work__item-title">Title Name</div>
+      <div class="work__item-desc">Desc text content. Lorem</div><a class="work__item-link" href="#">Link work view</a>
+    </div>
+  </div>
+  <div class="work__item"><img class="work__item-image" src="images/work-preview-small/tehosmotr.jpg">
+    <div class="work__item-content">
+      <div class="work__item-title">Title Name</div>
+      <div class="work__item-desc">Desc text content. Lorem</div><a class="work__item-link" href="#">Link work view</a>
+    </div>
+  </div>
+  <div class="work__item"><img class="work__item-image" src="images/work-preview-small/thpromo.jpg">
+    <div class="work__item-content">
+      <div class="work__item-title">Title Name</div>
+      <div class="work__item-desc">Desc text content. Lorem</div><a class="work__item-link" href="#">Link work view</a>
+    </div>
+  </div>
+  <div class="work__item"><img class="work__item-image" src="images/work-preview-small/trade-new.jpg">
+    <div class="work__item-content">
+      <div class="work__item-title">Title Name</div>
+      <div class="work__item-desc">Desc text content. Lorem</div><a class="work__item-link" href="#">Link work view</a>
+    </div>
+  </div>
+  <div class="work__item"><img class="work__item-image" src="images/work-preview-small/tuserwis-new.jpg">
+    <div class="work__item-content">
+      <div class="work__item-title">Title Name</div>
+      <div class="work__item-desc">Desc text content. Lorem</div><a class="work__item-link" href="#">Link work view</a>
+    </div>
+  </div>
+  <div class="work__item"><img class="work__item-image" src="images/work-preview-small/tuserwis.jpg">
+    <div class="work__item-content">
+      <div class="work__item-title">Title Name</div>
+      <div class="work__item-desc">Desc text content. Lorem</div><a class="work__item-link" href="#">Link work view</a>
+    </div>
+  </div>
+  <div class="work__item"><img class="work__item-image" src="images/work-preview-small/venture.jpg">
+    <div class="work__item-content">
+      <div class="work__item-title">Title Name</div>
+      <div class="work__item-desc">Desc text content. Lorem</div><a class="work__item-link" href="#">Link work view</a>
+    </div>
+  </div>
+  <div class="work__item"><img class="work__item-image" src="images/work-preview-small/world-lounge.jpg">
+    <div class="work__item-content">
+      <div class="work__item-title">Title Name</div>
+      <div class="work__item-desc">Desc text content. Lorem</div><a class="work__item-link" href="#">Link work view</a>
+    </div>
+  </div>
+  <div class="work__item"><img class="work__item-image" src="images/work-preview-small/yunibit.jpg">
     <div class="work__item-content">
       <div class="work__item-title">Title Name</div>
       <div class="work__item-desc">Desc text content. Lorem</div><a class="work__item-link" href="#">Link work view</a>
@@ -135,5 +458,5 @@
   </div>
 </div>
     </div>
-  <script src="libs.js"></script><script src="main.js"></script><script src="style.js"></script></body>
+  <script src="main.js"></script><script src="style.js"></script></body>
 </html>

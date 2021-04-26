@@ -1,38 +1,11 @@
 .work
-    .work__item
-        img(src="src/blocks/work/assets/img/work-image1.jpg").work__item-image
-        .work__item-content
-            .work__item-title Title Name
-            .work__item-desc Desc text content. Lorem
-            a(href="#").work__item-link Link work view
+    - let namesArray = ['admiral','afisha-light','afisha','animation','aplica','apteka','auto-tips','bersus','bismap','cargo','case','chehly','cirque','domdara','domzalogov','dvizhparty','factory','finift','fr','frichelli','gdeapteka','gmarket','golden-marrow','goodrent','gruzship','gt-autolab','iola','ist-nova','jakuba-new','jakuba','kaizerdom','leaf-garden','lider-kids','ljashenko','messenger','mfn','mining','moneparser','neoline','new-click','opensii','pharma','phonebot','ps','quest','remont','remship','sibhome','skorochtenie','souveniroff','suenko','tehosmotr','thpromo','trade-new','tuserwis-new','tuserwis','venture','world-lounge','yunibit']
 
-    .work__item
-        img(src="src/blocks/work/assets/img/work-image2.jpg").work__item-image
-        .work__item-content
-            .work__item-title Title Name
-            .work__item-desc Desc text content. Lorem
-            a(href="#").work__item-link Link work view
-    .work__item
-        img(src="src/blocks/work/assets/img/work-image3.jpg").work__item-image
-        .work__item-content
-            .work__item-title Title Name
-            .work__item-desc Desc text content. Lorem
-            a(href="#").work__item-link Link work view
-    .work__item
-        img(src="src/blocks/work/assets/img/work-image4.jpg").work__item-image
-        .work__item-content
-            .work__item-title Title Name
-            .work__item-desc Desc text content. Lorem
-            a(href="#").work__item-link Link work view
-    .work__item
-        img(src="src/blocks/work/assets/img/work-image5.jpg").work__item-image
-        .work__item-content
-            .work__item-title Title Name
-            .work__item-desc Desc text content. Lorem
-            a(href="#").work__item-link Link work view
-    .work__item
-        img(src="src/blocks/work/assets/img/work-image6.jpg").work__item-image
-        .work__item-content
-            .work__item-title Title Name
-            .work__item-desc Desc text content. Lorem
-            a(href="#").work__item-link Link work view
+
+    - for (let index=0;index<namesArray.length;index++)
+        .work__item
+            img(src="images/work-preview-small/" + namesArray[index] + ".jpg").work__item-image
+            .work__item-content
+                .work__item-title Title Name
+                .work__item-desc Desc text content. Lorem
+                a(href="#").work__item-link Link work view
